@@ -3,11 +3,11 @@ package com.example.thodlydugue.kizinlakayapp;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class AcceuilActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_acceuil);
+        setContentView(R.layout.activity_home);
     }
 }
