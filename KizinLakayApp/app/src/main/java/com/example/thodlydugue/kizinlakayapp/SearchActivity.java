@@ -76,7 +76,7 @@ public class SearchActivity extends AppCompatActivity {
                 if (drawerToggle.onOptionsItemSelected(item)) {
                     return true;
                 }
-                // Handle your other action bar items...
+                
                 return super.onOptionsItemSelected(item);
 
         }
