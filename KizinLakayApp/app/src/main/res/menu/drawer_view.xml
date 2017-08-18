@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_first_fragment"
+            android:icon="@drawable/steak"
+            android:title="Viandes"
+            >
+            </item>
+        <item
+            android:id="@+id/nav_second_fragment"
+            android:icon="@drawable/piece_cake"
+            android:title="Desserts" />
+        <item
+            android:id="@+id/nav_third_fragment"
+            android:icon="@drawable/drink"
+            android:title="Boissons" />
+        <item
+            android:id="@+id/nav_fourth_fragment"
+            android:icon="@drawable/drink"
+            android:title="Amuse-Gueules" />
+    </group>
+    <item android:title="">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:icon="@drawable/favorites"
+                    android:title="Mes Favorites"
+                    />
+
+            </group>
+        </menu>
+    </item>
+</menu>
