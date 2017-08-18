@@ -43,7 +43,10 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="29dp"
-        android:text="Voir preparation" />
+        android:background="#FC913A"
+        android:text="Voir preparation"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/textView2"
