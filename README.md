@@ -17,7 +17,8 @@ The following are the functionality :
   * [ ] Rice
   * [ ] Drinks
   * [ ] Appetizers
-  * [ ] User can **scroll down to see more recipes**. 
+  * [ ] User can **scroll down to see more recipes**.
+* [ ] User can sign in to their account.  
   
  ## Video Walkthrough
 
@@ -33,7 +34,7 @@ Describe any challenges encountered while building the app.
 ## Open-source libraries used 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2017] [name of copyright owner]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
