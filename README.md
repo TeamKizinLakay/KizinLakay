@@ -17,18 +17,13 @@ The following are the functionality :
   * [ ] Rice
   * [ ] Drinks
   * [ ] Appetizers
-  * [ ] User can **scroll down to see more recipes**. 
+  * [ ] User can **scroll down to see more recipes**.
+* [ ] User can sign in to their account.  
   
  ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
-
-<img src='http://i.imgur.com/9wmLAcx.png' title='Menu Drawer' width='' alt='Menu Drawer' />
-
-<img src='http://i.imgur.com/KpYNItg.png' title='Menu Drawer' width='' alt='Menu Drawer' />
-<img src='http://i.imgur.com/i4VvRCN.png' title='Menu Drawer' width='' alt='Menu Drawer' />
-<img src='http://i.imgur.com/3kfC65T.png' title='Menu Drawer' width='' alt='Menu Drawer' />
-<img src='http://i.imgur.com/1ccHAz9.png' title='Menu Drawer' width='' alt='Menu Drawer' />
+<img src='https://github.com/TeamKizinLakay/KizinLakay/blob/master/KizinLakay.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
@@ -39,7 +34,7 @@ Describe any challenges encountered while building the app.
 ## Open-source libraries used 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2017] [name of copyright owner]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
