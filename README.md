@@ -22,13 +22,7 @@ The following are the functionality :
  ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
-
-<img src='http://i.imgur.com/9wmLAcx.png' title='Menu Drawer' width='' alt='Menu Drawer' />
-
-<img src='http://i.imgur.com/KpYNItg.png' title='Menu Drawer' width='' alt='Menu Drawer' />
-<img src='http://i.imgur.com/i4VvRCN.png' title='Menu Drawer' width='' alt='Menu Drawer' />
-<img src='http://i.imgur.com/3kfC65T.png' title='Menu Drawer' width='' alt='Menu Drawer' />
-<img src='http://i.imgur.com/1ccHAz9.png' title='Menu Drawer' width='' alt='Menu Drawer' />
+<img src='https://github.com/TeamKizinLakay/KizinLakay/blob/master/KizinLakay.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
