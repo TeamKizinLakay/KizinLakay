@@ -17,7 +17,7 @@ import com.example.thodlydugue.kizinlakayapp.fragment.MeatFragment;
  * Created by sonel on 8/17/2017.
  */
 
-public class SearchActivity extends AppCompatActivity {
+public class MenuActivity extends AppCompatActivity {
     private DrawerLayout mDrawer;
     private Toolbar toolbar;
     private NavigationView nvDrawer;
