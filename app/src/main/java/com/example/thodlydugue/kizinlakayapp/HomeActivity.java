@@ -14,7 +14,6 @@ private Button bt;
         setContentView(R.layout.activity_home);
 
 
-
         bt = (Button) findViewById(R.id.btnStart);
         // bt.setBackgroundColor(Color.BLUE);
         bt.setOnClickListener(new View.OnClickListener() {
@@ -26,9 +25,7 @@ private Button bt;
                 //intent.putExtra("item",adapter.getItem(position));
                 startActivity(intent);
 
-
             }
         });
-
     }
 }

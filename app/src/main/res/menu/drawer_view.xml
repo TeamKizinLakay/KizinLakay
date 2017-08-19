@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_first_fragment"
             android:icon="@drawable/steak"
-            android:title="Viandes"
-            >
-            </item>
+            android:title="Viandes"></item>
         <item
             android:id="@+id/nav_second_fragment"
             android:icon="@drawable/piece_cake"

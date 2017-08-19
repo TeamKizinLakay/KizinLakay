@@ -69,7 +69,7 @@
         android:layout_alignStart="@+id/TvUsername" />
 
     <ImageButton
-        android:id="@+id/btnSearch"
+        android:id="@+id/btnSearchLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#f9d423"
@@ -79,12 +79,12 @@
         android:layout_marginTop="11dp" />
 
     <ImageButton
-        android:id="@+id/btnHome"
+        android:id="@+id/btnHomeLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/btnSearch"
-        android:layout_marginStart="18dp"
-        android:layout_toEndOf="@+id/btnConnecter"
+        android:layout_marginStart="16dp"
         android:background="#f9d423"
-        app:srcCompat="@drawable/ic_action_home" />
+        app:srcCompat="@drawable/ic_action_home"
+        android:layout_alignTop="@+id/btnSearchLogin"
+        android:layout_toEndOf="@+id/btnConnecter" />
 </RelativeLayout>
