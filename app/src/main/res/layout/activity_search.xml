@@ -6,14 +6,29 @@
     android:layout_height="match_parent"
     android:weightSum="1">
 
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:fitsSystemWindows="true"
+        android:minHeight="?attr/actionBarSize"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="#f9d423"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+    </android.support.v7.widget.Toolbar>
+
     <ImageView
         android:id="@+id/ivSearchDetails"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
+        android:layout_height="100dp"
         android:layout_weight="0.22"
-        app:srcCompat="@mipmap/ic_launcher" />
+        app:srcCompat="@mipmap/ic_launcher"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentStart="true" />
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -38,16 +53,16 @@
         android:layout_alignParentStart="true" />
 
     <Button
-        android:id="@+id/btnPreparation"
+        android:id="@+id/btnDetails"
         android:layout_width="308dp"
         android:layout_height="wrap_content"
-        android:background="#f9d423"
-        android:text="Voir preparation"
-        android:textColor="@android:color/background_light"
-        android:textSize="18sp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="27dp"/>
+        android:layout_marginBottom="10dp"
+        android:background="#f9d423"
+        android:text="Voir Details"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp" />
 
 
     <TextView
@@ -72,5 +87,18 @@ Puis faire frire quelques minutes et déguster.
         android:inputType="textMultiLine"
         android:maxLines="5"
         android:layout_below="@+id/editText"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
+    <ImageView
+        android:id="@+id/btnHomeSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#f9d423"
+        app:srcCompat="@drawable/ic_action_home"
+        android:layout_marginEnd="23dp"
+        android:layout_above="@+id/ivSearchDetails"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="11dp" />
+
 </RelativeLayout>
