@@ -50,7 +50,9 @@ public class MenuActivity extends AppCompatActivity {
        // View headerLayout = nvDrawer.inflateHeaderView(R.layout.nav_header);
 // We can now look up items within the header if needed
        // ImageView ivHeaderPhoto = headerLayout.findViewById(R.id.imageView);
-
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.flContent, new MenuFragment()).commit();
+        setTitle(R.string.listmenu);
 
     }
     //Setup a icon to drawe menu
@@ -110,6 +112,7 @@ public class MenuActivity extends AppCompatActivity {
                 break;
             default:
                 fragmentClass = MenuFragment.class;
+                break;
         }
 
         try {

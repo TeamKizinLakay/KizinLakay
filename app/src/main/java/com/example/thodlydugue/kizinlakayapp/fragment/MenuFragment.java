@@ -23,10 +23,10 @@ public class MenuFragment extends Fragment {
 
     // Array of integers points to images stored in /res/drawable/
     int[] menus = new int[]{
-            R.drawable.meats_menu,
-            R.drawable.meats_menu,
-            R.drawable.meats_menu,
-            R.drawable.meats_menu
+            R.drawable.meats,
+            R.drawable.soupe,
+            R.drawable.dessert,
+            R.drawable.boissons
 
     };
 
