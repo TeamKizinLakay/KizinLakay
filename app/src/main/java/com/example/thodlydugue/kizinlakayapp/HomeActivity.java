@@ -15,6 +15,9 @@ private Button bt;
 
 
 
+
+
+
         bt = (Button) findViewById(R.id.btnStart);
         // bt.setBackgroundColor(Color.BLUE);
         bt.setOnClickListener(new View.OnClickListener() {
@@ -27,8 +30,11 @@ private Button bt;
                 startActivity(intent);
 
 
+
             }
         });
 
-    }
+
+            }
+
 }

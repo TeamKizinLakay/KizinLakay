@@ -40,7 +40,6 @@
             app:headerLayout="@layout/nav_header"
             app:menu="@menu/drawer_view"
             app:itemTextColor="#FC913A"
-            app:itemIconTint="#FC913A"
             app:itemTextAppearance="@style/NavDrawerTextStyle"
         >
         </android.support.design.widget.NavigationView>

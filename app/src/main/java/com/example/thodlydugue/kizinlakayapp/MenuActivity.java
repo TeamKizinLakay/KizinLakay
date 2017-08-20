@@ -12,6 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.example.thodlydugue.kizinlakayapp.fragment.MeatFragment;
+import com.example.thodlydugue.kizinlakayapp.fragment.MenuFragment;
 
 /**
  * Created by sonel on 8/17/2017.
@@ -108,7 +109,7 @@ public class MenuActivity extends AppCompatActivity {
                 fragmentClass = MeatFragment.class;
                 break;
             default:
-                fragmentClass = MeatFragment.class;
+                fragmentClass = MenuFragment.class;
         }
 
         try {
