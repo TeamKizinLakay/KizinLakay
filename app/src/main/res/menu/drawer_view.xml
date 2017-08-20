@@ -8,7 +8,7 @@
             android:title="Viandes"></item>
         <item
             android:id="@+id/nav_second_fragment"
-            android:icon="@drawable/piece_cake"
+            android:icon="@drawable/icecream"
             android:title="Desserts" />
         <item
             android:id="@+id/nav_third_fragment"

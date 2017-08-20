@@ -12,6 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.example.thodlydugue.kizinlakayapp.fragment.MeatFragment;
+import com.example.thodlydugue.kizinlakayapp.fragment.MenuFragment;
 
 /**
  * Created by sonel on 8/17/2017.
@@ -49,7 +50,9 @@ public class MenuActivity extends AppCompatActivity {
        // View headerLayout = nvDrawer.inflateHeaderView(R.layout.nav_header);
 // We can now look up items within the header if needed
        // ImageView ivHeaderPhoto = headerLayout.findViewById(R.id.imageView);
-
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.flContent, new MenuFragment()).commit();
+        setTitle(R.string.listmenu);
 
     }
     //Setup a icon to drawe menu
@@ -108,7 +111,8 @@ public class MenuActivity extends AppCompatActivity {
                 fragmentClass = MeatFragment.class;
                 break;
             default:
-                fragmentClass = MeatFragment.class;
+                fragmentClass = MenuFragment.class;
+                break;
         }
 
         try {
