@@ -1,5 +1,8 @@
 package com.example.thodlydugue.kizinlakayapp;
 
+import android.app.Activity;
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -10,6 +13,8 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
 
 import com.example.thodlydugue.kizinlakayapp.fragment.MeatFragment;
 import com.example.thodlydugue.kizinlakayapp.fragment.MenuFragment;
@@ -23,7 +28,7 @@ public class MenuActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private NavigationView nvDrawer;
     private ActionBarDrawerToggle drawerToggle;
-
+    private ImageButton btsearch;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +58,19 @@ public class MenuActivity extends AppCompatActivity {
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.flContent, new MenuFragment()).commit();
         setTitle(R.string.listmenu);
+
+
+        btsearch = (ImageButton) findViewById(R.id.ButtonSearch);
+        btsearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent= new Intent(MenuActivity.this,Search_details.class);
+                //intent.putExtra("movie", movie);
+                //intent.putExtra("item",adapter.getItem(position));
+                startActivity(intent);
+            }
+        });
 
     }
     //Setup a icon to drawe menu

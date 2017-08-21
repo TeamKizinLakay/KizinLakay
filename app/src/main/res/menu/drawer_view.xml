@@ -7,9 +7,14 @@
             android:icon="@drawable/steak"
             android:title="Viandes"></item>
         <item
+            android:id="@+id/nav_fifth_fragment"
+            android:icon="@drawable/icecream"
+            android:title="Soupes" />
+        <item
             android:id="@+id/nav_second_fragment"
             android:icon="@drawable/icecream"
             android:title="Desserts" />
+
         <item
             android:id="@+id/nav_third_fragment"
             android:icon="@drawable/drink"
@@ -18,14 +23,14 @@
             android:id="@+id/nav_fourth_fragment"
             android:icon="@drawable/drink"
             android:title="Amuse-Gueules" />
+
     </group>
     <item android:title="">
         <menu>
             <group android:checkableBehavior="single">
                 <item
                     android:icon="@drawable/favorites"
-                    android:title="Mes Favorites"
-                    />
+                    android:title="Mes Favorites" />
 
             </group>
         </menu>
