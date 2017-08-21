@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:showIn="@layout/search_principal">
+
+    <EditText
+        android:id="@+id/etQuery"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="" />
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onArticleSearch"
+        android:text="Search"
+        android:textColor="#FFFAF0"
+        android:backgroundTint="#FF00FF"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        />
+
+
+    <GridView
+        android:id="@+id/gvResults"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="4"
+        android:layout_below="@+id/etQuery"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
