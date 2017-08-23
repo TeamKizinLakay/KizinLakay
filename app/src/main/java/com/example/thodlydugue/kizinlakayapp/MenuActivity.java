@@ -65,7 +65,7 @@ public class MenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent= new Intent(MenuActivity.this,Search_details.class);
+                Intent intent= new Intent(MenuActivity.this,PrincipalSearch.class);
                 //intent.putExtra("movie", movie);
                 //intent.putExtra("item",adapter.getItem(position));
                 startActivity(intent);
