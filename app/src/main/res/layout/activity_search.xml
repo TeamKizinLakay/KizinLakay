@@ -21,22 +21,15 @@
 
     </android.support.v7.widget.Toolbar>
 
-    <ImageView
-        android:id="@+id/ivSearchDetails"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_weight="0.22"
-        app:srcCompat="@mipmap/ic_launcher"
-        android:layout_below="@+id/toolbar"
-        android:layout_alignParentStart="true" />
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/ivSearchDetails"
-        android:layout_alignParentStart="true"
         android:hint="Acra"
-        android:textSize="18sp" />
+        android:textSize="20sp"
+        android:layout_marginBottom="21dp"
+        android:layout_above="@+id/textView2"
+        android:layout_toEndOf="@+id/textView2" />
 
     <EditText
         android:id="@+id/editText"
@@ -44,12 +37,12 @@
         android:layout_height="wrap_content"
         android:layout_weight="0.54"
         android:ems="10"
-        android:hint="1 petit poivron rouge         1 oignon            300g de morue           250g de farine
-1 oeuf          1/2 sachet de levure            1 beau bouquet de persil            du thym         de l'ail
+        android:hint="1 petit poivron rouge      1 oignon                       300g de morue       1 oeuf
+1/2 sachet de levure            1 beau bouquet de persil
 "
         android:inputType="textMultiLine"
-        android:maxLines="5"
-        android:layout_below="@+id/textView2"
+        android:maxLines="4"
+        android:layout_below="@+id/imageView3"
         android:layout_alignParentStart="true" />
 
     <Button
@@ -69,11 +62,11 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
         android:text="Ingredients :"
         android:textSize="14sp"
-        android:layout_below="@+id/ivSearchDetails"
+        android:layout_above="@+id/editText"
         android:layout_alignParentStart="true" />
+
     <EditText
         android:id="@+id/editText2"
         android:layout_width="match_parent"
@@ -85,10 +78,9 @@ Faire reposer 1h.
 Puis faire frire quelques minutes et déguster.
 "
         android:inputType="textMultiLine"
-        android:maxLines="5"
+        android:maxLines="4"
         android:layout_below="@+id/editText"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="10dp" />
+        android:layout_alignParentStart="true" />
 
     <ImageView
         android:id="@+id/btnHomeSearch"
@@ -97,8 +89,25 @@ Puis faire frire quelques minutes et déguster.
         android:background="#f9d423"
         app:srcCompat="@drawable/ic_action_home"
         android:layout_marginEnd="23dp"
-        android:layout_above="@+id/ivSearchDetails"
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="11dp" />
+
+    <ImageButton
+        android:id="@+id/btnAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#f9d423"
+        app:srcCompat="@drawable/ic_action_profil"
+        android:layout_marginEnd="23dp"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/btnHomeSearch" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="150dp"
+        android:layout_height="145dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/toolbar"
+        app:srcCompat="@drawable/home2" />
 
 </RelativeLayout>

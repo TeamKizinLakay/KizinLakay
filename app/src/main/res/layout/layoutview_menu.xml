@@ -1,14 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/homemenu"
+    android:scaleType="fitXY"
+    >
 
-    <ListView
+   <!-- <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/idlist"
         >
 
-    </ListView>
+    </ListView>-->
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Catégories de Mets"
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/background_light"
+        android:textSize="32sp"
+        android:textStyle="bold"/>
+
+
+    <Button
+        android:id="@+id/btnmeat"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="40dp"
+        android:background="@color/gris_noir"
+        android:text="VIANDES"
+        android:textColor="@android:color/background_light"
+        android:alpha="0.5"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        />
+
+    <Button
+        android:id="@+id/btndessert"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btnmeat"
+        android:layout_marginTop="60dp"
+        android:background="@color/gris_noir"
+        android:text="DESSERTS"
+        android:textColor="@android:color/background_light"
+        android:alpha="0.5"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        />
+
+    <Button
+        android:id="@+id/btnsoup"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btndessert"
+        android:layout_marginTop="60dp"
+        android:background="@color/gris_noir"
+        android:text="SOUPES"
+        android:textColor="@android:color/background_light"
+        android:alpha="0.5"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        />
+
+    <Button
+        android:id="@+id/btndrink"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btnsoup"
+        android:layout_marginTop="60dp"
+        android:background="@color/gris_noir"
+        android:text="JUS HAITIENNE"
+        android:textColor="@android:color/background_light"
+        android:alpha="0.5"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        />
+
+
+
+</RelativeLayout>

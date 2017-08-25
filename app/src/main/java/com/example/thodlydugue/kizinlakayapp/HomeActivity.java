@@ -5,8 +5,11 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
+
+
 public class HomeActivity extends AppCompatActivity {
-//private Button bt;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +23,7 @@ public class HomeActivity extends AppCompatActivity {
                 finish();
             }
         }, secondsDelayed * 4000);
+
 
 
       //  bt = (Button) findViewById(R.id.btnStart);
@@ -41,4 +45,7 @@ public class HomeActivity extends AppCompatActivity {
 
             }
 
-}
+
+
+            }
+

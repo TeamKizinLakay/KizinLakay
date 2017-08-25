@@ -5,8 +5,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
-import android.widget.SimpleAdapter;
 
 import com.example.thodlydugue.kizinlakayapp.R;
 
@@ -50,11 +48,11 @@ public class MenuFragment extends Fragment {
         // Ids of views in listview_layout
         int[] to = { R.id.ivmenu};
 
-        View v = inflater.inflate(R.layout.layoutview_menu, container,false);
+     /*   View v = inflater.inflate(R.layout.layoutview_menu, container,false);
         ListView list = (ListView)v.findViewById(R.id.idlist);
         SimpleAdapter adapter = new SimpleAdapter(getActivity().getBaseContext(), aList, R.layout.itemimage_menu, from, to);
-        list.setAdapter(adapter);
-        return v;
+        list.setAdapter(adapter);*/
+        return null;
     }
 
 }

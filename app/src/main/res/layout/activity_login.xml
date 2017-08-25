@@ -20,26 +20,24 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="167dp"
-        android:text="Username    :"
-        android:layout_alignParentTop="true"
-        android:layout_toStartOf="@+id/TvUsername"
-        android:layout_marginEnd="25dp" />
+        android:layout_marginTop="40dp"
+        android:text="Username  :"
+        android:layout_below="@+id/imageView4"
+        android:layout_toStartOf="@+id/btnConnecter" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="78dp"
-        android:text="Password    :"
-        android:layout_below="@+id/TvUsername"
-        android:layout_alignEnd="@+id/textView3" />
+        android:text="Password  :"
+        android:layout_alignBottom="@+id/TvPassword"
+        android:layout_alignStart="@+id/textView3" />
 
     <Button
         android:id="@+id/btnConnecter"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="83dp"
+        android:layout_marginTop="33dp"
         android:background="#f9d423"
         android:text=" Connecter"
         android:layout_below="@+id/TvPassword"
@@ -49,13 +47,11 @@
         android:id="@+id/TvUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView3"
-        android:layout_alignBottom="@+id/textView3"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="15dp"
         android:ems="10"
         android:hint="Thodly"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_toEndOf="@+id/textView3" />
 
     <EditText
         android:id="@+id/TvPassword"
@@ -64,27 +60,27 @@
         android:ems="10"
         android:hint="24#toto"
         android:inputType="textPersonName"
-        android:layout_alignBaseline="@+id/textView4"
-        android:layout_alignBottom="@+id/textView4"
-        android:layout_alignStart="@+id/TvUsername" />
-
-    <ImageButton
-        android:id="@+id/btnSearchLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#f9d423"
-        app:srcCompat="@android:drawable/ic_menu_search"
-        android:layout_alignParentTop="true"
-        android:layout_alignEnd="@+id/TvUsername"
-        android:layout_marginTop="11dp" />
+        android:layout_marginTop="22dp"
+        android:layout_below="@+id/textView3"
+        android:layout_toEndOf="@+id/textView4" />
 
     <ImageButton
         android:id="@+id/btnHomeLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:background="#f9d423"
         app:srcCompat="@drawable/ic_action_home"
-        android:layout_alignTop="@+id/btnSearchLogin"
-        android:layout_toEndOf="@+id/btnConnecter" />
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="11dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolbar"
+        app:srcCompat="@drawable/home21" />
+
 </RelativeLayout>
