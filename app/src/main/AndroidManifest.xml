@@ -15,7 +15,11 @@
         <activity android:name=".MenuActivity"/>
         <activity android:name=".LoginActivity"/>
         <activity android:name=".Search_details"/>
+
         <activity android:name=".search.MeatActivity"/>
+
+        <activity android:name=".PrincipalSearch"/>
+
         <activity android:name=".HomeActivity">
 
 
