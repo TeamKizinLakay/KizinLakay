@@ -25,12 +25,12 @@ public class LoginActivity extends AppCompatActivity {
 
         bthomelogin = (ImageButton) findViewById(R.id.btnHomeLogin);
         bthomelogin.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
+            @Override
+            public void onClick(View v) {
 
-            Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
-            startActivity(intent);
-        }
-    });
-}
+                Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
 }

@@ -26,30 +26,12 @@ public class Search_details extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent= new Intent(Search_details.this,MenuActivity.class);
-                startActivity(intent);
-            }
-        });
-
-
-        btaccount = (ImageButton) findViewById(R.id.btnAccount);
-        btaccount.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent intent= new Intent(Search_details.this,LoginActivity.class);
-                startActivity(intent);
-            }
-        });
-
-
-        btDetails = (Button) findViewById(R.id.btnDetails);
-        btDetails.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent= new Intent(Search_details.this,Details.class);
+                Intent intent = new Intent(Search_details.this, MenuActivity.class);
                 startActivity(intent);
             }
         });
     }
+
+
+
 }

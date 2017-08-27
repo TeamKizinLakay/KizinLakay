@@ -1,18 +1,25 @@
 package com.example.thodlydugue.kizinlakayapp.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.thodlydugue.kizinlakayapp.LoginActivity;
+import com.example.thodlydugue.kizinlakayapp.MenuActivity;
 import com.example.thodlydugue.kizinlakayapp.Modele.recettes;
 import com.example.thodlydugue.kizinlakayapp.R;
+import com.example.thodlydugue.kizinlakayapp.RecetteArrayAdapter;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.L;
 
 /**
  * Created by sonel on 8/24/2017.
@@ -24,9 +31,9 @@ public class ListviewrecetteAdapter extends ArrayAdapter<recettes> {
         TextView textrecette;
         ImageView imageView;
     }
-
     public ListviewrecetteAdapter(Context context, ArrayList<recettes> users) {
         super(context, R.layout.recette_layout, users);
+
     }
 
     @Override
