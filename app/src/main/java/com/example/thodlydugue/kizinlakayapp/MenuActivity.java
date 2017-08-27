@@ -6,6 +6,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+
+import com.example.thodlydugue.kizinlakayapp.search.DessertActivity;
+
+
 import com.example.thodlydugue.kizinlakayapp.search.MeatActivity;
 
 /**
@@ -14,6 +18,9 @@ import com.example.thodlydugue.kizinlakayapp.search.MeatActivity;
 
 public class MenuActivity extends AppCompatActivity {
    Button btnmeat;
+
+    Button btndessert;
+
     Button btndrink;
     Button btnjus;
     Button btnsoup;
@@ -33,11 +40,21 @@ public class MenuActivity extends AppCompatActivity {
                 Intent intent= new Intent(MenuActivity.this,MeatActivity.class);
                // intent.putExtra("movie", movie);
 
-                Intent intent= new Intent(MenuActivity.this,PrincipalSearch.class);
-                //intent.putExtra("movie", movie);
-
                 //intent.putExtra("item",adapter.getItem(position));
                 startActivity(intent);
+
+
+            }
+        });
+        btndessert=(Button)findViewById(R.id.btndessert);
+
+        btndessert.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent= new Intent(MenuActivity.this, DessertActivity.class);
+                // intent.putExtra("movie", movie);
+
 
 
             }

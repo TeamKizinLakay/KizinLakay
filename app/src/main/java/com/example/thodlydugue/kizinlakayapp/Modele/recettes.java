@@ -5,7 +5,13 @@ import java.util.List;
 import java.util.Map;
 
 /**
+<<<<<<< HEAD
+ * Created by sonel on 8/22/2017.Backendless.Data.of
+ *
+ * 3333333333333333333222222222222222222222222222222222222222222222222
+=======
  * Created by sonel on 8/22/2017.
+>>>>>>> 3e8b37cb6f6fb79ce35cb43d5522625170cda682
  */
 
 public class recettes {
