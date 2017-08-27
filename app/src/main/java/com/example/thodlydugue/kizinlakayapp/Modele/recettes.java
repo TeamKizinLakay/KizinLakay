@@ -5,9 +5,13 @@ import java.util.List;
 import java.util.Map;
 
 /**
+<<<<<<< HEAD
  * Created by sonel on 8/22/2017.Backendless.Data.of
  *
  * 3333333333333333333222222222222222222222222222222222222222222222222
+=======
+ * Created by sonel on 8/22/2017.
+>>>>>>> 3e8b37cb6f6fb79ce35cb43d5522625170cda682
  */
 
 public class recettes {
@@ -18,7 +22,6 @@ public class recettes {
     private String image_recette;
     private categories id_categorie;
     private String description;
-
 
 
     public recettes(){
@@ -68,7 +71,6 @@ this.nom_recette=getNom_recette();
             recettes p = new recettes();
             p.setNom_recette((String) map.get(i).get("nom_recette"));
             p.setImage_recette((String) map.get(i).get("image_recette"));
-
 
             recette.add(p);
         }

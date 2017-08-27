@@ -2,6 +2,7 @@ package com.example.thodlydugue.kizinlakayapp.search;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -12,9 +13,9 @@ import com.backendless.async.callback.AsyncCallback;
 import com.backendless.exceptions.BackendlessFault;
 import com.backendless.persistence.DataQueryBuilder;
 import com.example.thodlydugue.kizinlakayapp.Adapter.ListviewrecetteAdapter;
+import com.example.thodlydugue.kizinlakayapp.Adapter.RecyclerViewRecetteAdapter;
 import com.example.thodlydugue.kizinlakayapp.Modele.recettes;
 import com.example.thodlydugue.kizinlakayapp.R;
-
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,6 +31,12 @@ public class MeatActivity extends AppCompatActivity{
     public static final String AplicationID="268BBE9A-360E-B2F3-FF8D-C85C0FF31D00";
     public static final String SecretKey="F07AD7DB-2B05-C77E-FF2A-9BA63E0C1E00";
 
+
+
+
+   ArrayList<recettes> recette;
+    RecyclerView lvrecette;
+    RecyclerViewRecetteAdapter adapter;
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,13 +56,14 @@ public class MeatActivity extends AppCompatActivity{
 
         lvrecette.setAdapter(adapterRecette);
 
+
         //StringBuilder whereClause = new StringBuilder();
         //whereClause.append( "categories[nom_categorie]" );
         //whereClause.append( ".objectId='" ).append( "1D075E85-8468-6319-FF44-4831E11AB400"  );
 
 
     //  String whereClause = "categorie=Viandes";
-        IDataStore<Map> personneStorage = Backendless.Data.of( "recettes" );
+        IDataStore<Map> recettesStorage = Backendless.Data.of( "recettes" );
 
 
         DataQueryBuilder queryBuilder = DataQueryBuilder.create();
@@ -63,9 +71,10 @@ public class MeatActivity extends AppCompatActivity{
 
         queryBuilder.setWhereClause("id_categorie='1D075E85-8468-6319-FF44-4831E11AB400'");
 
-        personneStorage.find(queryBuilder,new AsyncCallback<List<Map>>()
+        recettesStorage.find(queryBuilder,new AsyncCallback<List<Map>>()
 
        {
+
 
             @Override
             public void handleResponse(List<Map> response) {
@@ -89,8 +98,6 @@ public class MeatActivity extends AppCompatActivity{
 
 
     }
-    public long getCurrentPage(){
-        long currentpage=0;
-        return currentpage;
-    }
+
+
 }

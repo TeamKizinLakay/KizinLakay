@@ -27,6 +27,7 @@
         card_view:contentPadding="10dp">
 
 
+<<<<<<< HEAD
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -35,10 +36,32 @@
             <ImageView
                 android:id="@+id/imrecette"
                 android:layout_width="200dp"
+=======
+        <TextView
+            android:id="@+id/txtrecette"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:ellipsize="end"
+            android:maxLines="4"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:orientation="horizontal">
+
+            <com.example.thodlydugue.kizinlakayapp.search.ResizableImageView
+                android:id="@+id/imrecette"
+                android:layout_width="wrap_content"
+>>>>>>> 3e8b37cb6f6fb79ce35cb43d5522625170cda682
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
                 android:background="@color/white"
                 android:scaleType="fitXY"
+<<<<<<< HEAD
                 android:src="@mipmap/ic_launcher"
                 android:layout_alignParentLeft="true"
                 />
@@ -54,6 +77,9 @@
                 android:maxLines="4"
                 android:textSize="25dp"
                 android:textStyle="bold" />
+=======
+                android:src="@mipmap/ic_launcher" />
+>>>>>>> 3e8b37cb6f6fb79ce35cb43d5522625170cda682
         </LinearLayout>
 
     </android.support.v7.widget.CardView>

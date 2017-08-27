@@ -28,4 +28,10 @@
         android:layout_alignParentEnd="true"
         android:background="#f9d423"
         app:srcCompat="@android:drawable/ic_search_category_default" />
+<<<<<<< HEAD
+=======
+        app:srcCompat="@android:drawable/ic_search_category_default"
+        android:onClick=""/>
+
+>>>>>>> 3e8b37cb6f6fb79ce35cb43d5522625170cda682
 </RelativeLayout>

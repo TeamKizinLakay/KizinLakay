@@ -13,6 +13,11 @@
         android:theme="@style/AppTheme">
 
 
+      
+
+        <activity android:name=".PrincipalSearch"/>
+
+
         <activity android:name=".HomeActivity">
 
 

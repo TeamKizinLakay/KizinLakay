@@ -1,14 +1,18 @@
 package com.example.thodlydugue.kizinlakayapp.Modele;
 
+<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+=======
+>>>>>>> 3e8b37cb6f6fb79ce35cb43d5522625170cda682
 /**
  * Created by sonel on 8/23/2017.
  */
 
 public class categories {
+<<<<<<< HEAD
 
    private String nom_categorie;
     private String objectId;
@@ -45,4 +49,6 @@ public class categories {
     }
 
 
+=======
+>>>>>>> 3e8b37cb6f6fb79ce35cb43d5522625170cda682
 }
