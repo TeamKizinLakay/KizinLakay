@@ -55,7 +55,7 @@ public class MenuActivity extends AppCompatActivity {
                 Intent intent= new Intent(MenuActivity.this, DessertActivity.class);
                 // intent.putExtra("movie", movie);
 
-
+                startActivity(intent);
 
             }
         });
