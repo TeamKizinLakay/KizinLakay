@@ -39,6 +39,7 @@ public class MenuActivity extends AppCompatActivity {
 
                 Intent intent= new Intent(MenuActivity.this,MeatActivity.class);
                // intent.putExtra("movie", movie);
+
                 //intent.putExtra("item",adapter.getItem(position));
                 startActivity(intent);
 
@@ -53,8 +54,7 @@ public class MenuActivity extends AppCompatActivity {
 
                 Intent intent= new Intent(MenuActivity.this, DessertActivity.class);
                 // intent.putExtra("movie", movie);
-                //intent.putExtra("item",adapter.getItem(position));
-                startActivity(intent);
+
 
 
             }
