@@ -33,6 +33,8 @@
         <activity android:name=".Search_details"/>
         <activity android:name=".search.MeatActivity"/>
         <activity android:name=".search.DessertActivity"/>
+        <activity android:name=".search.SoupActivity"/>
+        <activity android:name=".search.JuiceActivity"/>
     </application>
 
 </manifest>

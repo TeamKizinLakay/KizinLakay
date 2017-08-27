@@ -10,7 +10,9 @@ import android.widget.Button;
 import com.example.thodlydugue.kizinlakayapp.search.DessertActivity;
 
 
+import com.example.thodlydugue.kizinlakayapp.search.JuiceActivity;
 import com.example.thodlydugue.kizinlakayapp.search.MeatActivity;
+import com.example.thodlydugue.kizinlakayapp.search.SoupActivity;
 
 /**
  * Created by sonel on 8/17/2017.
@@ -60,6 +62,32 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
+        btnsoup=(Button)findViewById(R.id.btnsoup);
 
+        btnsoup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent= new Intent(MenuActivity.this, SoupActivity.class);
+                // intent.putExtra("movie", movie);
+
+                startActivity(intent);
+
+            }
+        });
+
+        btndrink=(Button)findViewById(R.id.btndrink);
+
+        btndrink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent= new Intent(MenuActivity.this, JuiceActivity.class);
+                // intent.putExtra("movie", movie);
+
+                startActivity(intent);
+
+            }
+        });
     }
 }
