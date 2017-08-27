@@ -15,99 +15,77 @@
         android:fitsSystemWindows="true"
         android:minHeight="?attr/actionBarSize"
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        android:background="#f9d423"
+        android:background="@color/colorPrimary"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true">
 
     </android.support.v7.widget.Toolbar>
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Acra"
-        android:textSize="20sp"
-        android:layout_marginBottom="21dp"
-        android:layout_above="@+id/textView2"
-        android:layout_toEndOf="@+id/textView2" />
-
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.54"
-        android:ems="10"
-        android:hint="1 petit poivron rouge      1 oignon                       300g de morue       1 oeuf
-1/2 sachet de levure            1 beau bouquet de persil
-"
-        android:inputType="textMultiLine"
-        android:maxLines="4"
-        android:layout_below="@+id/imageView3"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:id="@+id/btnDetails"
-        android:layout_width="308dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp"
-        android:background="#f9d423"
-        android:text="Voir Details"
-        android:textColor="@android:color/background_light"
-        android:textSize="18sp" />
-
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ingredients :"
-        android:textSize="14sp"
-        android:layout_above="@+id/editText"
-        android:layout_alignParentStart="true" />
-
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Faire déssaler la morue une après midi dans de l'eau puis la faire ébouillanté 4 minutes.
-Mixer tout le reste ensemble.Émiettez la morue et mélangez la à la pâte.
-Faire reposer 1h.
-Puis faire frire quelques minutes et déguster.
-"
-        android:inputType="textMultiLine"
-        android:maxLines="4"
-        android:layout_below="@+id/editText"
-        android:layout_alignParentStart="true" />
 
     <ImageView
         android:id="@+id/btnHomeSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#f9d423"
+        android:background="@color/colorPrimary"
         app:srcCompat="@drawable/ic_action_home"
-        android:layout_marginEnd="23dp"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="11dp" />
-
-    <ImageButton
-        android:id="@+id/btnAccount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#f9d423"
-        app:srcCompat="@drawable/ic_action_profil"
-        android:layout_marginEnd="23dp"
+        android:layout_marginEnd="21dp"
         android:layout_alignParentTop="true"
-        android:layout_toStartOf="@+id/btnHomeSearch" />
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="11dp" />
 
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="150dp"
-        android:layout_height="145dp"
-        android:layout_alignParentEnd="true"
+        android:id="@+id/ivRecette"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        app:srcCompat="@mipmap/ic_launcher"
         android:layout_below="@+id/toolbar"
-        app:srcCompat="@drawable/home2" />
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/tvNomrecette"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:layout_below="@+id/toolbar"
+        android:layout_toEndOf="@+id/ivRecette"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="54dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/ivRecette"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="46dp"
+        android:text="Ingredients :" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView6"
+        android:layout_marginTop="17dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Preparation :"
+        android:layout_below="@+id/textView7"
+        android:layout_alignEnd="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView8"
+        android:layout_marginTop="25dp"
+        android:text="TextView" />
 
 </RelativeLayout>
