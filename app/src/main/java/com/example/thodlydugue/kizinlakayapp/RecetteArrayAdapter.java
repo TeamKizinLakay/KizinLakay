@@ -2,10 +2,12 @@ package com.example.thodlydugue.kizinlakayapp;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Movie;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -19,17 +21,12 @@ import java.util.List;
  */
 
 public class RecetteArrayAdapter extends ArrayAdapter<Recette> {
-    ListView lvrecette;
-    int selectposition = -1;
-
 
     public RecetteArrayAdapter(Context context, List<Recette> articles){
         super(context, android.R.layout.simple_list_item_1, articles);
     }
 
     private ImageButton bthome;
-
-
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         //return super.getView(position, convertView, parent);
