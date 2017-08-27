@@ -20,7 +20,7 @@
         android:onClick="onRecetteSearch"
         android:text="Search"
         android:textColor="#FFFAF0"
-        android:backgroundTint="#FF00FF"
+        android:background="@color/colorPrimary"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         />

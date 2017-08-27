@@ -28,65 +28,65 @@
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         app:srcCompat="@drawable/ic_action_home"
-        android:layout_marginEnd="19dp"
+
+        android:layout_marginEnd="21dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="11dp" />
 
     <ImageView
         android:id="@+id/ivRecette"
-        android:layout_width="150dp"
+        android:layout_width="130dp"
         android:layout_height="130dp"
-        android:layout_alignParentStart="true"
+        app:srcCompat="@mipmap/ic_launcher"
         android:layout_below="@+id/toolbar"
-        app:srcCompat="@mipmap/ic_launcher" />
+        android:layout_alignParentStart="true" />
 
     <TextView
-        android:id="@+id/tvNom"
+        android:id="@+id/tvNomrecette"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="TextView"
         android:layout_below="@+id/toolbar"
-        android:layout_marginStart="23dp"
         android:layout_toEndOf="@+id/ivRecette"
-        android:text="TextView" />
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="54dp" />
 
     <TextView
-        android:id="@+id/tvIngredients"
+        android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView7"
-        android:layout_marginTop="14dp"
-        android:hint="500g de viande de boeuf hachée et marinée 4 tranches de pain de mie 250ml de lait 2 tranches de bacon découpées 100g de farine 1 gousse d'ail haché écrasée 1 cuillère à soupe de concentré de tomate Sel, Poivre Huile de friture "
-        android:maxLines="6" />
+        android:layout_below="@+id/ivRecette"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="46dp"
+        android:text="Ingredients :" />
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/ivRecette"
-        android:layout_marginTop="20dp"
-        android:text="Ingredients :" />
-
+        android:layout_below="@+id/textView6"
+        android:layout_marginTop="17dp"
+        android:text="TextView" />
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/tvIngredients"
-        android:layout_marginTop="21dp"
-        android:text="Preparation :" />
+        android:layout_marginTop="16dp"
+        android:text="Preparation :"
+        android:layout_below="@+id/textView7"
+        android:layout_alignEnd="@+id/textView6" />
 
     <TextView
-        android:id="@+id/tvPreparation"
+        android:id="@+id/textView9"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textView8"
-        android:layout_marginTop="17dp"
-        android:hint="Mettre à tremper les tranches de pains dans du lait chaud 5 minutes.  Pendant ce temps, mélanger le boeuf haché, le bacon émincé, l'ail écrasé, le concentré de tomate, le sel et le poivre.  Une fois le pain trempé, l'écraser et le mélanger à la préparation de la viande.  Etaler de la farine sur un lan de travail, servez vous d'une cuillère  soupe pour prendre un peu de la farce puis former des boulette en les roulant sur le plan de travail fariné. jeter les boulettes dans l'huile chaude ou une fritteuse environ 5 minutes. Mettre les boulettes sur du papier absorbant une fois cuites.  Servir accompagné tel quel ou faite cuire dans une sauce tomate pour accompagner riz ou sauce pois."
-        android:maxLines="12" />
-
+        android:layout_marginTop="25dp"
+        android:text="TextView" />
 
 </RelativeLayout>
