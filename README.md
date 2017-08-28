@@ -6,15 +6,15 @@
 The following are the functionality :
 
 * [ ] For each recipes pictures displayed, user can see the following details:
-  * [ ] Name, Image , Description  (Portrait mode)
+  * [X] Name, Image , Description  (Portrait mode)
   * [ ] Name, Images, short details (Landscape mode)
 * [ ] User can **scroll down to see more recipes**. 
-* [ ] User can click on the search button to **search for recipes** in a grid of recipes
-* [ ] User can search recipes by categories:
-  * [ ] Meat
-  * [ ] Soups
-  * [ ] Desserts
-  * [ ] Drinks
+* [X] User can click on the search button to **search for recipes** in a grid of recipes
+* [X] User can search recipes by categories:
+  * [X] Meat
+  * [X] Soups
+  * [X] Desserts
+  * [X] Drinks
   * [ ] Appetizers
 * [ ] User can sign in to their account.  
 * [ ] User can add their favorite recipes to their account.
