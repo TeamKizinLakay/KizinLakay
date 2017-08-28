@@ -34,22 +34,19 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <com.makeramen.roundedimageview.RoundedImageView
-                xmlns:app="http://schemas.android.com/apk/res-auto"
+            <com.makeramen.roundedimageview.RoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/imrecette"
-                android:layout_height="50dp"
                 android:layout_width="100dp"
-                app:riv_corner_radius="5dip"
-                app:riv_mutate_background="true"
-                app:riv_tile_mode="clamp"
-                app:riv_oval="false"
+                android:layout_height="100dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="5dp"
+                android:elevation="4dp"
                 app:riv_border_color="#ffffff"
                 app:riv_border_width="2dp"
-                android:layout_alignParentLeft="true"
-                android:elevation="4dp"
-                android:layout_marginBottom="5dp"/>
-
-
+                app:riv_corner_radius="5dip"
+                app:riv_mutate_background="true"
+                app:riv_oval="false"
+                app:riv_tile_mode="clamp" />
 
 
             <TextView
@@ -60,7 +57,7 @@
                 android:background="@color/white"
                 android:ellipsize="end"
                 android:maxLines="4"
-                android:textSize="20dp"/>
+                android:textSize="18dp" />
 
             <TextView
                 android:id="@+id/txtdescription"
@@ -70,7 +67,7 @@
                 android:background="@color/white"
                 android:ellipsize="end"
                 android:maxLines="4"
-                android:textSize="15dp"/>
+                android:textSize="13dp" />
 
         </LinearLayout>
 
