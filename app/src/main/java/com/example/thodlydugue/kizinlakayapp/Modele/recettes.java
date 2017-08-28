@@ -1,5 +1,6 @@
 package com.example.thodlydugue.kizinlakayapp.Modele;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -14,7 +15,7 @@ import java.util.Map;
 >>>>>>> 3e8b37cb6f6fb79ce35cb43d5522625170cda682
  */
 
-public class recettes {
+public class recettes implements Serializable {
 
 
 
@@ -91,6 +92,10 @@ this.nom_recette=getNom_recette();
             p.setNom_recette((String) map.get(i).get("nom_recette"));
             p.setImage_recette((String) map.get(i).get("image_recette"));
             p.setDescription((String) map.get(i).get("description"));
+            p.setIngredients((String) map.get(i).get("ingredients"));
+            p.setPreparation((String) map.get(i).get("preparation"));
+
+
 
             recette.add(p);
         }

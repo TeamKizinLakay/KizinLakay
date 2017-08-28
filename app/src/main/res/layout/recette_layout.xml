@@ -34,7 +34,11 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <com.makeramen.roundedimageview.RoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+
+
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/imrecette"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
@@ -49,6 +53,7 @@
                 app:riv_tile_mode="clamp" />
 
 
+
             <TextView
                 android:id="@+id/txtrecette"
                 android:layout_width="match_parent"
@@ -57,7 +62,10 @@
                 android:background="@color/white"
                 android:ellipsize="end"
                 android:maxLines="4"
-                android:textSize="18dp" />
+
+                android:textSize="20dp"/>
+
+
 
             <TextView
                 android:id="@+id/txtdescription"
@@ -67,7 +75,8 @@
                 android:background="@color/white"
                 android:ellipsize="end"
                 android:maxLines="4"
-                android:textSize="13dp" />
+
+                android:textSize="15dp"/>
 
         </LinearLayout>
 

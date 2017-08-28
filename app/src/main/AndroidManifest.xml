@@ -28,7 +28,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MenuActivity"/>
+        <activity android:name=".MenuActivity"
+
+            />
         <activity android:name=".LoginActivity"/>
         <activity android:name=".Search_details"/>
         <activity android:name=".search.MeatActivity"/>
