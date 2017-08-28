@@ -11,40 +11,41 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         app:srcCompat="@drawable/logomodify"
         android:layout_marginBottom="361dp"
-        android:layout_alignBottom="@+id/imageView5"
-        android:layout_alignParentStart="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="match_parent"
-        android:layout_height="500dp"
-        app:srcCompat="@drawable/home21"
-        android:layout_marginBottom="11dp"
-        android:layout_alignParentStart="true" />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="189dp"
-        android:background="@color/colorPrimary"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
+    <!--   <ImageView
+          android:id="@+id/imageView5"
+          android:layout_width="match_parent"
+          android:layout_height="500dp"
+          app:srcCompat="@drawable/home21"
+          android:layout_marginBottom="11dp"
+          android:layout_marginTop="20dp"
+          android:layout_alignParentStart="true" />
+     <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="189dp"
+          android:background="@color/colorPrimary"
+          android:layout_alignParentBottom="true"
+          android:layout_alignParentStart="true"
 
-        android:weightSum="1">
+          android:weightSum="1">
 
 
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:layout_weight="1.13"
-            android:gravity="center_horizontal"
-            android:text="Bienvenue"
+          <TextView
+              android:id="@+id/textView5"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="50dp"
+              android:layout_weight="1.13"
+              android:gravity="center_horizontal"
+              android:text="Bienvenue"
 
-            android:textColor="@color/white"
-            android:textSize="50dp"
-            android:textStyle="bold" />
-    </LinearLayout>
+              android:textColor="@color/white"
+              android:textSize="50dp"
+              android:textStyle="bold" />
+      </LinearLayout>-->
 </RelativeLayout>

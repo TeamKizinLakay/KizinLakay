@@ -37,5 +37,11 @@ dependencies {
 //Cardview
     compile'com.android.support:cardview-v7:26.+'
 
+    compile 'com.makeramen:roundedimageview:2.2.0'
+
+    compile 'com.jakewharton:butterknife:8.4.0'
+
+
+
 
 }
