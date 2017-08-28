@@ -18,15 +18,14 @@
         android:layout_alignParentStart="true"/>
 
 
-<ImageView
-    android:layout_width="match_parent"
-    android:layout_height="250dp"
-    android:background="@drawable/background"
-    android:id="@+id/imageView2"
-    android:layout_marginTop="50dp"
-    />
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/background" />
 
-<RelativeLayout
+
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/white"
@@ -35,13 +34,16 @@
     android:layout_marginTop="12dp">
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Bienvenue sur l'Application Kizin Lakay,pour vous servir!!!!! Apprenez à cuisiner les meilleures recettes Haitiennes..."
+        android:gravity="center_horizontal"
+        android:text="Apprenez à cuisiner les meilleures recettes Haitiennes..."
         android:textColor="@color/red"
+        android:textSize="20dp"
         android:textStyle="italic"
-        android:textSize="16dp"
-        android:id="@+id/textView2" />
+        android:layout_below="@+id/imageView2"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:id="@+id/btnmeat"
@@ -52,8 +54,8 @@
         android:alpha="0.8"
         android:textStyle="bold"
         android:textSize="10sp"
-        android:layout_below="@+id/btnsoup"
-        android:layout_alignParentEnd="true" />
+        android:layout_below="@+id/btnAperitif"
+        android:layout_alignStart="@+id/btndrink" />
 
     <Button
         android:id="@+id/btndessert"
@@ -64,8 +66,8 @@
         android:alpha="0.8"
         android:textStyle="bold"
         android:textSize="10sp"
-        android:layout_below="@+id/btnAperitif"
-        android:layout_alignStart="@+id/btnsoup" />
+        android:layout_above="@+id/btnAperitif"
+        android:layout_toStartOf="@+id/btnAperitif" />
 
     <Button
         android:id="@+id/btnsoup"
@@ -76,9 +78,9 @@
         android:alpha="0.8"
         android:textStyle="bold"
         android:textSize="10sp"
-        android:layout_below="@+id/textView2"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="10dp" />
+        android:layout_marginBottom="24dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/btndessert" />
 
 
     <Button
@@ -90,8 +92,8 @@
         android:alpha="0.8"
         android:textStyle="bold"
         android:textSize="10sp"
-        android:layout_below="@+id/textView2"
-        android:layout_alignParentEnd="true" />
+        android:layout_above="@+id/btnAperitif"
+        android:layout_toEndOf="@+id/btnAperitif" />
 
     <Button
         android:id="@+id/btnAperitif"
@@ -102,13 +104,13 @@
         android:textColor="@color/red"
         android:textSize="10sp"
         android:textStyle="bold"
-        android:layout_below="@+id/textView2"
+        android:layout_above="@+id/btnsoup"
         android:layout_centerHorizontal="true" />
 
 
 
 
 
-</RelativeLayout>
+
 
 </RelativeLayout>

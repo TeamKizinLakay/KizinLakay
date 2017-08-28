@@ -7,24 +7,21 @@
     tools:context="com.example.thodlydugue.kizinlakayapp.HomeActivity">
 
 
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="130dp"
         app:srcCompat="@drawable/logomodify"
-        android:layout_marginBottom="361dp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true" />
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
 
-    <!--   <ImageView
-          android:id="@+id/imageView5"
-          android:layout_width="match_parent"
-          android:layout_height="500dp"
-          app:srcCompat="@drawable/home21"
-          android:layout_marginBottom="11dp"
-          android:layout_marginTop="20dp"
-          android:layout_alignParentStart="true" />
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:srcCompat="@drawable/home21" />
      <LinearLayout
           android:layout_width="match_parent"
           android:layout_height="189dp"
@@ -47,5 +44,5 @@
               android:textColor="@color/white"
               android:textSize="50dp"
               android:textStyle="bold" />
-      </LinearLayout>-->
+      </LinearLayout>
 </RelativeLayout>
