@@ -96,6 +96,7 @@ this.nom_recette=getNom_recette();
             p.setPreparation((String) map.get(i).get("preparation"));
 
 
+
             recette.add(p);
         }
 

@@ -39,8 +39,10 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layoutview_menu);
 
-        Toolbar toolbar1 = (Toolbar) findViewById(R.id.toolbar1);
-        setSupportActionBar(toolbar1);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar1);
+        setSupportActionBar(toolbar);
+
 
      btnmeat=(Button)findViewById(R.id.btnmeat);
 

@@ -21,6 +21,9 @@ import com.backendless.exceptions.BackendlessFault;
 import com.backendless.persistence.DataQueryBuilder;
 import com.example.thodlydugue.kizinlakayapp.Adapter.ListviewrecetteAdapter;
 import com.example.thodlydugue.kizinlakayapp.DetailsActivity;
+
+import com.example.thodlydugue.kizinlakayapp.MenuActivity;
+
 import com.example.thodlydugue.kizinlakayapp.Modele.recettes;
 import com.example.thodlydugue.kizinlakayapp.R;
 
@@ -218,6 +221,24 @@ public class MeatActivity extends AppCompatActivity{
 
 
     //Set up Method details view
+
+    private void setUpClickListener() {
+        lvrecette.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //view is an instance of MovieView
+                //Expose details of movie (ratings (out of 10), popularity, and synopsis
+                //ratings using RatingBar
+              recettes recette = listRecette.get(position);
+
+                Intent intent = new Intent(MeatActivity.this, DetailsActivity.class);
+                intent.putExtra("recettes",recette);
+                startActivity(intent);
+            }
+            });
+
+}
 
 
 

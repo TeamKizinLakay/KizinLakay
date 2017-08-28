@@ -12,103 +12,105 @@
         android:layout_width="match_parent"
         android:fitsSystemWindows="true"
         android:minHeight="?attr/actionBarSize"
-        app:theme="@style/AppTheme.AppBarOverlay"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         android:background="#f50206"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"/>
 
 
-<ImageView
-    android:layout_width="match_parent"
-    android:layout_height="250dp"
-    android:background="@drawable/background"
-    android:id="@+id/imageView2"
-    android:layout_marginTop="50dp"
-    />
-    <TextView
+    <ImageView
+        android:id="@+id/imageView2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Bienvenue sur l'Application Kizin Lakay,pour vous servir!!!!! Apprenez à cuisiner les meilleures recettes Haitiennes..."
-        android:textColor="@color/red"
-        android:textStyle="bold"
-        android:textSize="18dp"
-        android:id="@+id/textView2"
-        android:textAlignment="center"
-        android:layout_below="@+id/imageView2"
-        />
+        android:layout_height="150dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/background" />
 
 
-    <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/white"
-    android:layout_marginTop="25dp"
-        android:orientation="horizontal"
-        android:layout_below="@+id/textView2"
-        android:layout_centerHorizontal="true">
+    android:layout_below="@+id/imageView2"
+    android:layout_alignParentStart="true"
+    android:layout_marginTop="12dp">
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Apprenez à cuisiner les meilleures recettes Haitiennes..."
+        android:textColor="@color/red"
+        android:textSize="20dp"
+        android:textStyle="italic"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:id="@+id/btnmeat"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
         android:background="@drawable/icon_meat"
         android:textColor="@color/red"
         android:alpha="0.8"
         android:textStyle="bold"
         android:textSize="10sp"
-        android:layout_weight="0.25"
-        />
+        android:layout_below="@+id/btnAperitif"
+        android:layout_alignStart="@+id/btndrink" />
 
     <Button
         android:id="@+id/btndessert"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
         android:background="@drawable/pastry"
         android:textColor="@color/red"
         android:alpha="0.8"
         android:textStyle="bold"
         android:textSize="10sp"
-         />
+        android:layout_above="@+id/btnAperitif"
+        android:layout_toStartOf="@+id/btnAperitif" />
 
     <Button
         android:id="@+id/btnsoup"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
         android:background="@drawable/soupicone"
         android:textColor="@color/red"
         android:alpha="0.8"
         android:textStyle="bold"
         android:textSize="10sp"
-         />
+        android:layout_marginBottom="24dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/btndessert" />
 
 
     <Button
         android:id="@+id/btndrink"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
         android:background="@drawable/drink1"
         android:textColor="@color/red"
         android:alpha="0.8"
         android:textStyle="bold"
         android:textSize="10sp"
-       />
+        android:layout_above="@+id/btnAperitif"
+        android:layout_toEndOf="@+id/btnAperitif" />
 
     <Button
         android:id="@+id/btnAperitif"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
         android:alpha="0.8"
         android:background="@drawable/appetizer"
         android:textColor="@color/red"
         android:textSize="10sp"
         android:textStyle="bold"
-      />
+        android:layout_above="@+id/btnsoup"
+        android:layout_centerHorizontal="true" />
 
 
 
 
 
-</LinearLayout>
+
 
 </RelativeLayout>
