@@ -21,7 +21,6 @@ import com.backendless.exceptions.BackendlessFault;
 import com.backendless.persistence.DataQueryBuilder;
 import com.example.thodlydugue.kizinlakayapp.Adapter.ListviewrecetteAdapter;
 import com.example.thodlydugue.kizinlakayapp.DetailsActivity;
-import com.example.thodlydugue.kizinlakayapp.MenuActivity;
 import com.example.thodlydugue.kizinlakayapp.Modele.recettes;
 import com.example.thodlydugue.kizinlakayapp.R;
 
@@ -70,7 +69,6 @@ public class MeatActivity extends AppCompatActivity{
 
         lvrecette.setAdapter(adapterRecette);
 
-
         //StringBuilder whereClause = new StringBuilder();
         //whereClause.append( "categories[nom_categorie]" );
         //whereClause.append( ".objectId='" ).append( "1D075E85-8468-6319-FF44-4831E11AB400"  );
@@ -105,6 +103,22 @@ public class MeatActivity extends AppCompatActivity{
             public void handleFault(BackendlessFault fault) {
 
                 Toast.makeText(getApplicationContext(), fault.getMessage(),Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+        lvrecette.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //view is an instance of MovieView
+                //Expose details of movie (ratings (out of 10), popularity, and synopsis
+                //ratings using RatingBar
+                recettes recette = listRecette.get(position);
+
+                   Intent intent = new Intent(MeatActivity.this, DetailsActivity.class);
+                     intent.putExtra("recettes", recette);
+                    startActivity(intent);
 
             }
         });
@@ -204,23 +218,7 @@ public class MeatActivity extends AppCompatActivity{
 
 
     //Set up Method details view
-    private void setUpClickListener() {
-        lvrecette.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                //view is an instance of MovieView
-                //Expose details of movie (ratings (out of 10), popularity, and synopsis
-                //ratings using RatingBar
-                // recettes r = r.get(position);
-
-                Intent intent = new Intent(MeatActivity.this, DetailsActivity.class);
-             //   intent.putExtra("recettes",recette);
-                startActivity(intent);
-            }
-            });
-
-}
 
 
 }

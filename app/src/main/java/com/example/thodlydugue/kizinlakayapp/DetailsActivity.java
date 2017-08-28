@@ -10,8 +10,6 @@ import com.squareup.picasso.Picasso;
 
 import butterknife.ButterKnife;
 
-import static com.example.thodlydugue.kizinlakayapp.R.id;
-
 /**
  * Created by sonel on 8/27/2017.
  */
@@ -29,9 +27,9 @@ public class DetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_details);
 
         //retrieve recette that's been 'sent' from main activity
-        final recettes recette = (recettes) getIntent().getSerializableExtra("recette");
+        recettes recette = (recettes) getIntent().getSerializableExtra("recettes");
 
-
+//System.out.println(recette.getNom_recette());
         //retrieve all fields and set their value
         tvRecette = ButterKnife.findById(this, R.id.titlerecette);
         tvRecette.setText(recette.getNom_recette());
@@ -42,7 +40,7 @@ public class DetailsActivity extends AppCompatActivity {
         tvpreparation = ButterKnife.findById(this, R.id.preparation);
         tvpreparation.setText(recette.getPreparation());
 
-        ivImage = ButterKnife.findById(this, id.imrecette);
+        ivImage = ButterKnife.findById(this, R.id.ivrecette);
 
     /*    ivImage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,7 +57,7 @@ public class DetailsActivity extends AppCompatActivity {
                 }
 
             }
-        });*/
+        }); */
 
         Picasso.with(this).load(recette.getImage_recette())
                 .into(ivImage);
