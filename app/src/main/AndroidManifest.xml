@@ -35,6 +35,8 @@
         <activity android:name=".search.DessertActivity"/>
         <activity android:name=".search.SoupActivity"/>
         <activity android:name=".search.JuiceActivity"/>
+        <activity android:name=".DetailsActivity"/>
+
     </application>
 
 </manifest>

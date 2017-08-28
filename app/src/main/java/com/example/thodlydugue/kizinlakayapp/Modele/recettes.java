@@ -22,6 +22,25 @@ public class recettes {
     private String image_recette;
     private categories id_categorie;
     private String description;
+    private String ingredients;
+
+    public String getIngredients() {
+        return ingredients;
+    }
+
+    public void setIngredients(String ingredients) {
+        this.ingredients = ingredients;
+    }
+
+    public String getPreparation() {
+        return preparation;
+    }
+
+    public void setPreparation(String preparation) {
+        this.preparation = preparation;
+    }
+
+    private String preparation;
 
 
     public recettes(){
@@ -71,6 +90,7 @@ this.nom_recette=getNom_recette();
             recettes p = new recettes();
             p.setNom_recette((String) map.get(i).get("nom_recette"));
             p.setImage_recette((String) map.get(i).get("image_recette"));
+            p.setDescription((String) map.get(i).get("description"));
 
             recette.add(p);
         }

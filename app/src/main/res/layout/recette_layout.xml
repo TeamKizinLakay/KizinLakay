@@ -33,14 +33,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <com.makeramen.roundedimageview.RoundedImageView
                 xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/imrecette"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:minWidth="100dp"
-                android:minHeight="50dp"
-                android:scaleType="fitCenter"
+                android:layout_height="50dp"
+                android:layout_width="100dp"
                 app:riv_corner_radius="5dip"
                 app:riv_mutate_background="true"
                 app:riv_tile_mode="clamp"
@@ -50,15 +48,9 @@
                 android:layout_alignParentLeft="true"
                 android:elevation="4dp"
                 android:layout_marginBottom="5dp"/>
-        <!--    <ImageView
-                android:id="@+id/imrecette"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:adjustViewBounds="true"
-                android:background="@color/white"
-                android:scaleType="fitXY"
-                android:src="@mipmap/ic_launcher" />-->
+
+
+
 
             <TextView
                 android:id="@+id/txtrecette"
@@ -68,8 +60,18 @@
                 android:background="@color/white"
                 android:ellipsize="end"
                 android:maxLines="4"
-                android:textSize="20dp"
-                android:textStyle="bold" />
+                android:textSize="20dp"/>
+
+            <TextView
+                android:id="@+id/txtdescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:ellipsize="end"
+                android:maxLines="4"
+                android:textSize="15dp"/>
+
         </LinearLayout>
 
 

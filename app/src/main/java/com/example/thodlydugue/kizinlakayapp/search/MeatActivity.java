@@ -1,5 +1,6 @@
 package com.example.thodlydugue.kizinlakayapp.search;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +9,8 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -17,6 +20,8 @@ import com.backendless.async.callback.AsyncCallback;
 import com.backendless.exceptions.BackendlessFault;
 import com.backendless.persistence.DataQueryBuilder;
 import com.example.thodlydugue.kizinlakayapp.Adapter.ListviewrecetteAdapter;
+import com.example.thodlydugue.kizinlakayapp.DetailsActivity;
+import com.example.thodlydugue.kizinlakayapp.MenuActivity;
 import com.example.thodlydugue.kizinlakayapp.Modele.recettes;
 import com.example.thodlydugue.kizinlakayapp.R;
 
@@ -34,11 +39,14 @@ public class MeatActivity extends AppCompatActivity{
     public static final String AplicationID="268BBE9A-360E-B2F3-FF8D-C85C0FF31D00";
     public static final String SecretKey="F07AD7DB-2B05-C77E-FF2A-9BA63E0C1E00";
 
+     private recettes recette;
 
 
     public ArrayList<recettes> listRecette;
     public ListView lvrecette;
     public ListviewrecetteAdapter adapterRecette;
+
+
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,6 +112,7 @@ public class MeatActivity extends AppCompatActivity{
 
 
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -191,6 +200,27 @@ public class MeatActivity extends AppCompatActivity{
 
 
     }
+
+
+
+    //Set up Method details view
+    private void setUpClickListener() {
+        lvrecette.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //view is an instance of MovieView
+                //Expose details of movie (ratings (out of 10), popularity, and synopsis
+                //ratings using RatingBar
+                // recettes r = r.get(position);
+
+                Intent intent = new Intent(MeatActivity.this, DetailsActivity.class);
+             //   intent.putExtra("recettes",recette);
+                startActivity(intent);
+            }
+            });
+
+}
 
 
 }

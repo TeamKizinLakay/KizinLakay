@@ -3,91 +3,112 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
-    android:scaleType="fitXY"
     >
-
-   <!-- <ListView
-        android:layout_width="match_parent"
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar1"
         android:layout_height="wrap_content"
-        android:id="@+id/idlist"
-        >
+        android:layout_width="match_parent"
+        android:fitsSystemWindows="true"
+        android:minHeight="?attr/actionBarSize"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="#f50206"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"/>
 
-    </ListView>-->
+
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:background="@drawable/background"
+    android:id="@+id/imageView2"
+    android:layout_marginTop="50dp"
+    />
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_below="@+id/imageView2"
+    android:layout_alignParentStart="true"
+    android:layout_marginTop="12dp">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:text="Catégories de Mets"
-        android:layout_marginTop="16dp"
-        android:textColor="@android:color/background_light"
-        android:textSize="32sp"
-        android:textStyle="bold"/>
-
+        android:text="Bienvenue sur l'Application Kizin Lakay,pour vous servir!!!!! Apprenez à cuisiner les meilleures recettes Haitiennes..."
+        android:textColor="@color/red"
+        android:textStyle="italic"
+        android:textSize="16dp"
+        android:id="@+id/textView2" />
 
     <Button
         android:id="@+id/btnmeat"
-        android:layout_width="240dp"
+        android:layout_width="100dp"
         android:layout_height="80dp"
-        android:layout_below="@+id/textView"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/design_button_menu"
-        android:text="VIANDES"
+        android:background="@drawable/icon_meat"
         android:textColor="@color/red"
         android:alpha="0.8"
         android:textStyle="bold"
-        android:textSize="30sp"
-        android:layout_centerHorizontal="true"
-        />
+        android:textSize="10sp"
+        android:layout_below="@+id/btnsoup"
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:id="@+id/btndessert"
-        android:layout_width="240dp"
+        android:layout_width="100dp"
         android:layout_height="80dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/btnmeat"
-        android:layout_marginTop="60dp"
-        android:background="@drawable/design_button_menu"
-        android:text="DESSERTS"
+        android:background="@drawable/pastry"
         android:textColor="@color/red"
         android:alpha="0.8"
         android:textStyle="bold"
-        android:textSize="30sp"
-        />
+        android:textSize="10sp"
+        android:layout_below="@+id/btnAperitif"
+        android:layout_alignStart="@+id/btnsoup" />
 
     <Button
         android:id="@+id/btnsoup"
-        android:layout_width="240dp"
+        android:layout_width="100dp"
         android:layout_height="80dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/btndessert"
-        android:layout_marginTop="60dp"
-        android:background="@drawable/design_button_menu"
-        android:text="SOUPES"
+        android:background="@drawable/soupicone"
         android:textColor="@color/red"
         android:alpha="0.8"
         android:textStyle="bold"
-        android:textSize="30sp"
-        />
+        android:textSize="10sp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp" />
+
 
     <Button
         android:id="@+id/btndrink"
-        android:layout_width="240dp"
+        android:layout_width="100dp"
         android:layout_height="80dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/btnsoup"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/design_button_menu"
-        android:text="JUS HAITIENNE"
+        android:background="@drawable/drink1"
         android:textColor="@color/red"
         android:alpha="0.8"
         android:textStyle="bold"
-        android:textSize="30sp"
-        />
+        android:textSize="10sp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/btnAperitif"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:alpha="0.8"
+        android:background="@drawable/appetizer"
+        android:textColor="@color/red"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true" />
 
 
+
+
+
+</RelativeLayout>
 
 </RelativeLayout>
