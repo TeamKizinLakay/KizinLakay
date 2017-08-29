@@ -54,9 +54,13 @@ public class ApetizerActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
-
+        toolbar.setNavigationIcon(R.drawable.ic_backbuttonlight);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
         Backendless.initApp(getApplicationContext(), AplicationID, SecretKey);
 
 
