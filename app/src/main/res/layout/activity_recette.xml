@@ -17,6 +17,7 @@
         android:fitsSystemWindows="true"
         android:minHeight="?attr/actionBarSize"
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:titleTextColor="@android:color/white"
         android:background="#f50206"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
@@ -42,7 +43,7 @@
 
 
 
-    <ImageButton
+  <!--  <ImageButton
         android:id="@+id/btnback"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -51,7 +52,7 @@
         android:layout_marginStart="17dp"
         android:layout_marginTop="15dp"
         android:background="#f50206"
-        app:srcCompat="?attr/homeAsUpIndicator" />
+        app:srcCompat="?attr/homeAsUpIndicator" />-->
 
 
 

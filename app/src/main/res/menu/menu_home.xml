@@ -5,7 +5,6 @@
         android:id="@+id/action_search1"
         android:icon="@drawable/ic_account"
         android:title="Account"
-        app:showAsAction="ifRoom"
-        app:actionViewClass="android.support.v7.widget.SearchView">
+        app:showAsAction="ifRoom">
     </item>
 </menu>

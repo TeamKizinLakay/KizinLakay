@@ -33,7 +33,11 @@ public class MenuActivity extends AppCompatActivity {
     Button btndessert;
 
     Button btndrink;
+
+    Button btnapptizer;
+
     Button btnaperitif;
+
     Button btnsoup;
 
     @Override
