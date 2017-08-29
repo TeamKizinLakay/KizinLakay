@@ -1,5 +1,6 @@
 package com.example.thodlydugue.kizinlakayapp;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
@@ -12,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 
 
+import com.example.thodlydugue.kizinlakayapp.search.ApetizerActivity;
 import com.example.thodlydugue.kizinlakayapp.search.DessertActivity;
 
 
@@ -31,7 +33,11 @@ public class MenuActivity extends AppCompatActivity {
     Button btndessert;
 
     Button btndrink;
+
     Button btnapptizer;
+
+    Button btnaperitif;
+
     Button btnsoup;
 
     @Override
@@ -100,6 +106,17 @@ public class MenuActivity extends AppCompatActivity {
                 Intent intent= new Intent(MenuActivity.this, JuiceActivity.class);
                 // intent.putExtra("movie", movie);
 
+                startActivity(intent);
+
+            }
+        });
+        btnaperitif=(Button)findViewById(R.id.btnAperitif);
+
+        btnaperitif.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent= new Intent(MenuActivity.this, ApetizerActivity.class);
                 startActivity(intent);
 
             }

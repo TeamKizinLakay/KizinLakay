@@ -21,8 +21,9 @@
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_marginTop="50dp"
+        android:layout_height="200dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolbar1"
         android:background="@drawable/background" />
 
 
@@ -45,72 +46,76 @@
         android:layout_below="@+id/imageView2"
         android:layout_alignParentStart="true" />
 
+
+<RelativeLayout
+    android:layout_width="300dp"
+    android:layout_height="200dp"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentStart="true">
     <Button
         android:id="@+id/btnmeat"
         android:layout_width="100dp"
         android:layout_height="80dp"
-        android:background="@drawable/icon_meat"
+        android:background="@drawable/chicken"
         android:textColor="@color/red"
         android:alpha="0.8"
         android:textStyle="bold"
         android:textSize="10sp"
-        android:layout_below="@+id/btnAperitif"
-        android:layout_alignStart="@+id/btndrink" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="18dp" />
 
     <Button
         android:id="@+id/btndessert"
-        android:layout_width="100dp"
-        android:layout_height="80dp"
-        android:background="@drawable/pastry"
-        android:textColor="@color/red"
+        android:layout_width="90dp"
+        android:layout_height="70dp"
         android:alpha="0.8"
-        android:textStyle="bold"
+        android:background="@drawable/cake"
+        android:textColor="@color/red"
         android:textSize="10sp"
-        android:layout_above="@+id/btnAperitif"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
         android:layout_toStartOf="@+id/btnAperitif" />
 
     <Button
         android:id="@+id/btnsoup"
         android:layout_width="100dp"
         android:layout_height="80dp"
-        android:background="@drawable/soupicone"
+        android:background="@drawable/soup"
         android:textColor="@color/red"
         android:alpha="0.8"
         android:textStyle="bold"
         android:textSize="10sp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="14dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/btndessert" />
+        android:layout_toStartOf="@+id/btnAperitif" />
 
 
     <Button
         android:id="@+id/btndrink"
         android:layout_width="100dp"
         android:layout_height="80dp"
-        android:background="@drawable/drink1"
+        android:background="@drawable/coffee"
         android:textColor="@color/red"
         android:alpha="0.8"
         android:textStyle="bold"
         android:textSize="10sp"
-        android:layout_above="@+id/btnAperitif"
-        android:layout_toEndOf="@+id/btnAperitif" />
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:id="@+id/btnAperitif"
         android:layout_width="100dp"
         android:layout_height="80dp"
         android:alpha="0.8"
-        android:background="@drawable/appetizer"
+        android:background="@drawable/kebab"
         android:textColor="@color/red"
         android:textSize="10sp"
         android:textStyle="bold"
-        android:layout_above="@+id/btnsoup"
+        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
 
-
-
-
-
-
+</RelativeLayout>
 </RelativeLayout>
