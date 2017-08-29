@@ -22,7 +22,7 @@ The following are the functionality :
  ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
-<img src='https://github.com/TeamKizinLakay/KizinLakay/blob/master/KizinLakay.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/8YpXzZv.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
