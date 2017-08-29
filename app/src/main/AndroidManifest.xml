@@ -35,6 +35,7 @@
         <activity android:name=".Search_details"/>
         <activity android:name=".search.MeatActivity"/>
         <activity android:name=".search.DessertActivity"/>
+        <activity android:name=".search.ApetizerActivity"/>
         <activity android:name=".search.SoupActivity"/>
         <activity android:name=".search.JuiceActivity"/>
         <activity android:name=".DetailsActivity"/>
