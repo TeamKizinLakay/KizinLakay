@@ -2,6 +2,7 @@
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:id="@+id/movie_details"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,9 +12,20 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.thodlydugue.kizinlakayapp.DetailsActivity">
 
+    <ImageView
+        android:id="@+id/ivrecette"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        tools:src="@mipmap/ic_launcher" />
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="214dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -40,14 +52,15 @@
                     />
 
 
-                <RatingBar
+
+             <!--   <RatingBar
                     android:id="@+id/rating_bar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="10dp"
                     android:isIndicator="true"
-                    android:numStars="10" />
+                    android:numStars="10" />-->
 
 
             </LinearLayout>
@@ -68,13 +81,6 @@
 
                 </LinearLayout>
 
-                <ImageView
-                    android:id="@+id/ivrecette"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="10dp"
-                    tools:src="@mipmap/ic_launcher" />
 
                 <TextView
                     android:id="@+id/tvIngredients"
@@ -88,6 +94,14 @@
 
 
                     />
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    card_view:cardCornerRadius="2dp"
+                    card_view:contentPadding="10dp">
 
                 <TextView
                     android:id="@+id/preparation"
@@ -95,7 +109,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     tools:text="Preparation" />
-
+</android.support.v7.widget.CardView>
             </LinearLayout>
 
 
@@ -105,7 +119,7 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <Button
+              <!--  <Button
                     android:id="@+id/videoplayer"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -113,7 +127,7 @@
                     android:background="@color/colorAccent"
                     android:text="Play Trailer"
                     android:textColor="@android:color/background_light"
-                    android:textSize="22sp" />
+                    android:textSize="22sp" />-->
 
             </LinearLayout>
 
