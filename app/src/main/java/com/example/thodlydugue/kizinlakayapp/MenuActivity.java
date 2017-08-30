@@ -3,6 +3,7 @@ package com.example.thodlydugue.kizinlakayapp;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -18,11 +19,17 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.example.thodlydugue.kizinlakayapp.Adapter.SlidingImage_Adapter;
 import com.example.thodlydugue.kizinlakayapp.search.ApetizerActivity;
 import com.example.thodlydugue.kizinlakayapp.search.DessertActivity;
 import com.example.thodlydugue.kizinlakayapp.search.JuiceActivity;
 import com.example.thodlydugue.kizinlakayapp.search.MeatActivity;
 import com.example.thodlydugue.kizinlakayapp.search.SoupActivity;
+
+import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
+import com.viewpagerindicator.CirclePageIndicator;
 
 /**
  * Created by sonel on 8/17/2017.
@@ -41,34 +48,24 @@ public class MenuActivity extends AppCompatActivity {
 
     Button btnsoup;
 
-    ViewPager viewPager;
+    private static ViewPager mPager;
+    private static int currentPage = 0;
+    private static int NUM_PAGES = 0;
 
-    CustomPagerAdapter mCustomPagerAdapter;
-    int[] mResources = {
+    private static final Integer[] IMAGES= {
             R.drawable.home2,
             R.drawable.home21,
-            R.drawable.homemenu,
-            R.drawable.background
+            R.drawable.home1,
+            R.drawable.boissons
     };
+    private ArrayList<Integer> ImagesArray = new ArrayList<Integer>();
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layoutview_menu);
-
-
-
-        mCustomPagerAdapter = new CustomPagerAdapter(this);
-
-        viewPager = (ViewPager) findViewById(R.id.pagerrecette);
-        viewPager.setAdapter(mCustomPagerAdapter);
-
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar1);
-        setSupportActionBar(toolbar);
-
-
-
      btnmeat=(Button)findViewById(R.id.btnmeat);
 
         btnmeat.setOnClickListener(new View.OnClickListener() {
@@ -140,7 +137,70 @@ public class MenuActivity extends AppCompatActivity {
 
             }
         });
+
+
+
+        for(int i=0;i<IMAGES.length;i++)
+            ImagesArray.add(IMAGES[i]);
+
+        mPager = (ViewPager) findViewById(R.id.pagerrecette);
+
+
+        mPager.setAdapter(new SlidingImage_Adapter(MenuActivity.this,ImagesArray));
+
+
+        CirclePageIndicator indicator = (CirclePageIndicator)
+                findViewById(R.id.indicator);
+
+        indicator.setViewPager(mPager);
+
+        final float density = getResources().getDisplayMetrics().density;
+
+//Set circle indicator radius
+        indicator.setRadius(5 * density);
+
+        NUM_PAGES =IMAGES.length;
+
+        // Auto start of viewpager
+        final Handler handler = new Handler();
+        final Runnable Update = new Runnable() {
+            public void run() {
+                if (currentPage == NUM_PAGES) {
+                    currentPage = 0;
+                }
+                mPager.setCurrentItem(currentPage++, true);
+            }
+        };
+        Timer swipeTimer = new Timer();
+        swipeTimer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                handler.post(Update);
+            }
+        }, 3000, 3000);
+
+        // Pager listener over indicator
+        indicator.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+
+            @Override
+            public void onPageSelected(int position) {
+                currentPage = position;
+
+            }
+
+            @Override
+            public void onPageScrolled(int pos, float arg1, int arg2) {
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int pos) {
+
+            }
+        });
+
     }
+
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_home, menu);
@@ -153,42 +213,6 @@ public class MenuActivity extends AppCompatActivity {
 
 //Slide Image
 
-    class CustomPagerAdapter extends PagerAdapter {
 
-        Context mContext;
-        LayoutInflater mLayoutInflater;
-
-        public CustomPagerAdapter(Context context) {
-            mContext = context;
-            mLayoutInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        }
-
-        @Override
-        public int getCount() {
-            return mResources.length;
-        }
-
-        @Override
-        public boolean isViewFromObject(View view, Object object) {
-            return view == ((LinearLayout) object);
-        }
-
-        @Override
-        public Object instantiateItem(ViewGroup container, int position) {
-            View itemView = mLayoutInflater.inflate(R.layout.pager_item, container, false);
-
-            ImageView imageView = (ImageView) itemView.findViewById(R.id.imageView2);
-            imageView.setImageResource(mResources[position]);
-
-            container.addView(itemView);
-
-            return itemView;
-        }
-
-        @Override
-        public void destroyItem(ViewGroup container, int position, Object object) {
-            container.removeView((LinearLayout) object);
-        }
-    }
 
 }

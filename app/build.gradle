@@ -29,19 +29,12 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:design:26.+'
     compile 'com.backendless:backendless:4.0.3'
-
     compile 'com.squareup.picasso:picasso:2.5.2'
-
-    compile 'com.android.support:recyclerview-v7:26.+'
-
-//Cardview
-    compile'com.android.support:cardview-v7:26.+'
-
+    compile 'com.android.support:recyclerview-v7:26.0'
+    //Cardview
+    compile 'com.android.support:cardview-v7:26.+'
     compile 'com.makeramen:roundedimageview:2.2.0'
-
     compile 'com.jakewharton:butterknife:8.4.0'
-
-
-
-
+    compile 'fr.avianey.com.viewpagerindicator:library:2.4.1.1@aar'
+    compile files('build/Resizer-1.4.2.jar')
 }
