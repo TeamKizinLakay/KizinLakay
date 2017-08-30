@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar1"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:fitsSystemWindows="true"
+        android:minHeight="?attr/actionBarSize"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="#f50206"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"/>
+
+<!--
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolbar1"
+        android:background="@drawable/background" />-->
+
+
+    <android.support.v4.view.ViewPager
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/pagerrecette"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@+id/toolbar1"
+        >
+    </android.support.v4.view.ViewPager>
+
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Apprenez à cuisiner les meilleures recettes Haitiennes..."
+        android:textColor="@color/red"
+        android:textSize="20dp"
+        android:textStyle="italic"
+        android:layout_below="@+id/pagerrecette"
+        android:layout_alignParentStart="true" />
+
+
+<RelativeLayout
+    android:layout_width="300dp"
+    android:layout_height="200dp"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentStart="true">
+    <Button
+        android:id="@+id/btnmeat"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:background="@drawable/chicken"
+        android:textColor="@color/red"
+        android:alpha="0.8"
+        android:textStyle="bold"
+        android:textSize="10sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="18dp" />
+
+    <Button
+        android:id="@+id/btndessert"
+        android:layout_width="90dp"
+        android:layout_height="70dp"
+        android:alpha="0.8"
+        android:background="@drawable/cake"
+        android:textColor="@color/red"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/btnAperitif" />
+
+    <Button
+        android:id="@+id/btnsoup"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:background="@drawable/soup"
+        android:textColor="@color/red"
+        android:alpha="0.8"
+        android:textStyle="bold"
+        android:textSize="10sp"
+        android:layout_marginEnd="14dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/btnAperitif" />
+
+
+    <Button
+        android:id="@+id/btndrink"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:background="@drawable/coffee"
+        android:textColor="@color/red"
+        android:alpha="0.8"
+        android:textStyle="bold"
+        android:textSize="10sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/btnAperitif"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:alpha="0.8"
+        android:background="@drawable/kebab"
+        android:textColor="@color/red"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
+</RelativeLayout>
