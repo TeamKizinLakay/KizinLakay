@@ -1,5 +1,6 @@
 package com.example.thodlydugue.kizinlakayapp;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,6 +17,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -47,6 +49,8 @@ public class MenuActivity extends AppCompatActivity {
     Button btnaperitif;
 
     Button btnsoup;
+
+    ImageButton btnaccount;
 
     private static ViewPager mPager;
     private static int currentPage = 0;
@@ -138,6 +142,15 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
+        btnaccount = (ImageButton) findViewById(R.id.btnAccount);
+        btnaccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(MenuActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
         for(int i=0;i<IMAGES.length;i++)
