@@ -50,7 +50,7 @@ public class DetailsActivity extends AppCompatActivity {
         tvRecette.setText(recette.getNom_recette());
 
         tvIngredients = ButterKnife.findById(this, R.id.tvIngredients);
-        tvIngredients.setText("Ingredients: " + recette.getIngredients());
+        tvIngredients.setText(recette.getIngredients());
 
         tvpreparation = ButterKnife.findById(this, R.id.preparation);
         tvpreparation.setText(recette.getPreparation());
