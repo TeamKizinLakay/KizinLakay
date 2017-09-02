@@ -1,138 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-  <!--  <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
+<!--  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      >
 
-        <TextView
-            android:id="@+id/titlerecette"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            tools:text="Recette"
-            android:textStyle="bold"
+      <TextView
+          android:id="@+id/titlerecette"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:textAppearance="?android:attr/textAppearanceLarge"
+          tools:text="Recette"
+          android:textStyle="bold"
 
-            />
+          />
 
-        <LinearLayout
-            android:layout_width="123dp"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:weightSum="1">
-
-
-            <TextView
-                android:id="@+id/tvIngredients"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_alignParentLeft="true"
-                android:layout_marginTop="10dp"
-                android:textColor="@color/cardview_dark_background"
-                android:textSize="14dp"
-                tools:text="Ingredients"
-
-                android:layout_weight="3.50" />
+      <LinearLayout
+          android:layout_width="123dp"
+          android:layout_height="match_parent"
+          android:orientation="vertical"
+          android:weightSum="1">
 
 
-        </LinearLayout>
+          <TextView
+              android:id="@+id/tvIngredients"
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:layout_alignParentLeft="true"
+              android:layout_marginTop="10dp"
+              android:textColor="@color/cardview_dark_background"
+              android:textSize="14dp"
+              tools:text="Ingredients"
 
-        <ImageView
-            android:id="@+id/ivrecette"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
-            tools:src="@mipmap/ic_launcher" />
-
-    </LinearLayout>
-
-
-   <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="214dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:orientation="vertical">
+              android:layout_weight="3.50" />
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
+      </LinearLayout>
+
+      <ImageView
+          android:id="@+id/ivrecette"
+          android:layout_width="200dp"
+          android:layout_height="200dp"
+          android:layout_gravity="center_horizontal"
+          android:layout_marginTop="10dp"
+          tools:src="@mipmap/ic_launcher" />
+
+  </LinearLayout>
 
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="horizontal">
+ <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginTop="214dp"
+      android:layout_alignParentTop="true"
+      android:layout_alignParentStart="true">
 
-                </LinearLayout>
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_margin="10dp"
+          android:orientation="vertical">
+
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:orientation="vertical">
+
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1"
+                  android:orientation="horizontal">
+
+              </LinearLayout>
 
 
 
-                <android.support.v7.widget.CardView
-                    android:id="@+id/card_view"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_margin="5dp"
-                    card_view:cardCornerRadius="2dp"
-                    card_view:contentPadding="10dp">
+              <android.support.v7.widget.CardView
+                  android:id="@+id/card_view"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:layout_margin="5dp"
+                  card_view:cardCornerRadius="2dp"
+                  card_view:contentPadding="10dp">
 
-                <TextView
-                    android:id="@+id/preparation"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    tools:text="Preparation" />
+              <TextView
+                  android:id="@+id/preparation"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="10dp"
+                  tools:text="Preparation" />
 </android.support.v7.widget.CardView>
-            </LinearLayout>
+          </LinearLayout>
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:orientation="vertical">
 
-            </LinearLayout>
+          </LinearLayout>
 
 
-        </LinearLayout>
-    </ScrollView>
+      </LinearLayout>
+  </ScrollView>
 -->
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:orientation="vertical"
-        android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:padding="2dp">
+
+    <!--
+    <ImageView
+        android:id="@+id/ivArticle"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:padding="2dp">
+        android:src="@mipmap/ic_wifi"
+        android:background="@color/white"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"/>
 
-        <!--
-        <ImageView
-            android:id="@+id/ivArticle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/ic_wifi"
-            android:background="@color/white"
-            android:adjustViewBounds="true"
-            android:scaleType="fitXY"/>
-
-           -->
+       -->
 
     <android.support.v7.widget.Toolbar
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -148,98 +148,111 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="3dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginRight="9dp"
+        card_view:cardElevation="0.01dp"
+        android:layout_marginBottom="0dp">
+
+        <RelativeLayout
+            android:id="@+id/top_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivrecette"
+                android:layout_width="fill_parent"
+                android:layout_height="250dp"
+                android:scaleType="centerCrop"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="INGREDIENTS"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginBottom="5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/ivrecette" />
+
+            <TextView
+                android:id="@+id/titlerecette"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:layout_gravity="bottom"
+                android:gravity="center_vertical"
+                android:background="#5c1b1b1b"
+                android:alpha="0.8"
+                android:textColor="#fff"
+                android:textSize="26sp"
+                android:text="Test"
+                android:layout_alignParentStart="true" />
+
 
 
             <LinearLayout
                 android:layout_width="match_parent"
+                android:id="@+id/linearIn"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-
-
-
-                <com.makeramen.roundedimageview.RoundedImageView
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/ivrecette"
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginBottom="5dp"
-                    android:elevation="4dp"
-                    card_view:riv_border_color="#ffffff"
-                    card_view:riv_border_width="2dp"
-                    card_view:riv_corner_radius="5dip"
-                    card_view:riv_mutate_background="true"
-                    card_view:riv_oval="false"
-                    card_view:riv_tile_mode="clamp"
-                    tools:src="@mipmap/ic_launcher" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:id="@+id/tvIngredients"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginTop="40dp"
-                        android:background="@color/white"
-                        android:text="Preparation"
-                        android:textSize="15dp" />
-
-
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
+                android:orientation="vertical"
+                android:layout_below="@+id/ivrecette"
+                android:weightSum="1">
 
 
                 <TextView
-                    android:id="@+id/titlerecette"
+                    android:id="@+id/tvIngredients"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="25dp"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="14sp"
+                    android:textStyle="bold|italic"
                     android:gravity="center"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    tools:text="Recette"
+                    tools:text="Ingredients"
+                    android:layout_weight="3.50"/>
+                <TextView
+                    android:id="@+id/prepara"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="2dp"
+                    android:text="PREPARATION"
                     android:textStyle="bold"
-                    android:textSize="30dp"
-                    android:textColor="@color/colorAccent"
-
-                    />
-
-
-
+                    android:layout_gravity="center"
+                    android:textSize="20sp" />
             </LinearLayout>
 
-       <LinearLayout
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content">
 
-           <android.support.v7.widget.CardView
-               android:id="@+id/card_view"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:layout_gravity="center"
-               android:layout_margin="5dp"
-               android:layout_marginTop="20dp"
-               card_view:cardCornerRadius="2dp"
-               card_view:contentPadding="10dp">
-
-               <TextView
-                   android:id="@+id/preparation"
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:layout_marginTop="10dp"
-                   tools:text="Preparation" />
-           </android.support.v7.widget.CardView>
-       </LinearLayout>
+            <TextView
+                android:id="@+id/preparation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="5dp"
+                android:paddingBottom="2dp"
+                android:textColor="#ff272727"
+                android:textSize="15sp"
+                android:text="Preparation"
+                android:layout_below="@+id/linearIn" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</ScrollView>
     </LinearLayout>
-
 
