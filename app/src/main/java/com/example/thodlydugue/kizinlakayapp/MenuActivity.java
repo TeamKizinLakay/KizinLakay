@@ -1,5 +1,6 @@
 package com.example.thodlydugue.kizinlakayapp;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -50,7 +51,6 @@ public class MenuActivity extends AppCompatActivity {
     Button btnsoup;
 
     ImageButton btnaccount;
-
 
     private static ViewPager mPager;
     private static int currentPage = 0;
