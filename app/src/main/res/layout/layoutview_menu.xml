@@ -5,23 +5,38 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <android.support.v7.widget.Toolbar
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/toolbar1"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:fitsSystemWindows="true"
-        android:minHeight="?attr/actionBarSize"
-        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        android:background="#FF0000" />
 
-    <android.support.v4.view.ViewPager
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/toolbar1"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:fitsSystemWindows="true"
+            android:minHeight="?attr/actionBarSize"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:background="@color/colorPrimary" />
+
+        <ImageButton
+            android:id="@+id/btnAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="23dp"
+            android:background="@color/colorPrimary"
+            app:srcCompat="@drawable/ic_account"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+
+    <android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/pagerrecette"
         android:layout_width="match_parent"
-        android:layout_height="300dp">
-    </android.support.v4.view.ViewPager>
+        android:layout_height="200dp"></android.support.v4.view.ViewPager>
 
     <com.viewpagerindicator.CirclePageIndicator
         android:id="@+id/indicator"
@@ -31,8 +46,8 @@
         android:padding="10dip"
         app:centered="true"
         app:fillColor="#FF0000"
-        />
-
+        app:pageColor="#FF0000"
+        app:snap="false" />
 
     <TextView
         android:id="@+id/textView2"
@@ -46,89 +61,99 @@
         tools:ignore="HardcodedText" />
 
 
-<RelativeLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:id="@+id/Relative1">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:orientation="vertical"
+    <RelativeLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/linear1"
-        android:gravity="end">
+        android:id="@+id/Relative1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:id="@+id/linear1"
+            android:gravity="end">
+
+            <Button
+                android:id="@+id/btndrink"
+                android:background="@drawable/circle"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:drawableTop="@mipmap/ic_coffee"
+                android:textColor="#FFFF"
+                android:alpha="0.8"
+                android:text="BOISSONS"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:textSize="10sp"
+                android:paddingRight="5dp"
+                tools:ignore="RtlHardcoded,RtlSymmetry,SmallSp" />
+
+            <Button
+                android:id="@+id/btnmeat"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/circle"
+                android:drawableTop="@mipmap/ic_chicken"
+                android:text="VIANDES"
+                android:layout_margin="10dp"
+                android:alpha="0.8"
+                android:textStyle="bold"
+                android:textSize="10sp"
+                android:textColor="#FFFF"
+                tools:ignore="SmallSp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:id="@+id/linear2"
+            android:gravity="start">
+
+            <Button
+                android:id="@+id/btndessert"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:alpha="0.8"
+                android:background="@drawable/circle"
+                android:drawableTop="@mipmap/ic_cake"
+                android:text="DESSERTS"
+                android:textColor="#FFFF"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnsoup"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:alpha="0.8"
+                android:background="@drawable/circle"
+                android:drawableTop="@mipmap/ic_soup"
+                android:text="SOUPES"
+                android:textColor="#FFFF"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
 
         <Button
-            android:id="@+id/btndrink"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="@mipmap/ic_coffee"
-            android:textColor="@color/red"
-            android:alpha="0.8"
-            android:layout_margin="10dp"
-            android:textStyle="bold"
-            android:textSize="10sp"
-            android:paddingRight="5dp"
-            tools:ignore="RtlHardcoded,RtlSymmetry,SmallSp" />
-
-        <Button
-            android:id="@+id/btnmeat"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="@mipmap/ic_chicken"
-            android:textColor="@color/red"
-            android:layout_margin="10dp"
-            android:alpha="0.8"
-            android:textStyle="bold"
-            android:textSize="10sp"
-            tools:ignore="SmallSp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_height="wrap_content"
-        android:id="@+id/linear2"
-        android:gravity="start">
-
-        <Button
-            android:id="@+id/btndessert"
+            android:id="@+id/btnAperitif"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:alpha="0.8"
-            android:background="@mipmap/ic_cake"
-            android:textColor="@color/red"
-            android:layout_margin="10dp"
+            android:drawableTop="@mipmap/ic_kebab"
+            android:background="@drawable/circle"
+            android:text="APERITIFS"
+            android:textColor="#FFFF"
             android:textSize="12sp"
-            android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/btnsoup"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="@mipmap/ic_soup"
-        android:textColor="@color/red"
-        android:layout_margin="10dp"
-        android:alpha="0.8"
-        android:textStyle="bold"
-        android:textSize="12sp" />
-
-    </LinearLayout>
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
 
 
-
-    <Button
-        android:id="@+id/btnAperitif"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:alpha="0.8"
-        android:background="@mipmap/ic_kebab"
-        android:textColor="@color/red"
-        android:textSize="12sp"
-        android:textStyle="bold"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
-
-
-</RelativeLayout>
+    </RelativeLayout>
 </LinearLayout>
