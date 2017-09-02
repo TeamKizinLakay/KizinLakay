@@ -1,6 +1,5 @@
 package com.example.thodlydugue.kizinlakayapp.search;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
@@ -61,6 +60,8 @@ public class ApetizerActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
+        getSupportActionBar().setTitle("Amuse-Gueules");
+
         Backendless.initApp(getApplicationContext(), AplicationID, SecretKey);
 
 

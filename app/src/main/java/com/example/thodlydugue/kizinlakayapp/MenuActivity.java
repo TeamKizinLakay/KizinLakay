@@ -1,23 +1,16 @@
 package com.example.thodlydugue.kizinlakayapp;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.view.MenuItemCompat;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
-import android.support.v7.widget.Toolbar;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 
 import com.example.thodlydugue.kizinlakayapp.Adapter.SlidingImage_Adapter;
 import com.example.thodlydugue.kizinlakayapp.search.ApetizerActivity;
@@ -25,11 +18,11 @@ import com.example.thodlydugue.kizinlakayapp.search.DessertActivity;
 import com.example.thodlydugue.kizinlakayapp.search.JuiceActivity;
 import com.example.thodlydugue.kizinlakayapp.search.MeatActivity;
 import com.example.thodlydugue.kizinlakayapp.search.SoupActivity;
+import com.viewpagerindicator.CirclePageIndicator;
 
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
-import com.viewpagerindicator.CirclePageIndicator;
 
 /**
  * Created by sonel on 8/17/2017.
@@ -53,10 +46,11 @@ public class MenuActivity extends AppCompatActivity {
     private static int NUM_PAGES = 0;
 
     private static final Integer[] IMAGES= {
-            R.drawable.home2,
-            R.drawable.home21,
-            R.drawable.home1,
-            R.drawable.boissons
+            R.drawable.slide1,
+            R.drawable.slide3,
+            R.drawable.slide2,
+            R.drawable.slide4,
+            R.drawable.slide5
     };
     private ArrayList<Integer> ImagesArray = new ArrayList<Integer>();
 
@@ -177,7 +171,7 @@ public class MenuActivity extends AppCompatActivity {
             public void run() {
                 handler.post(Update);
             }
-        }, 3000, 3000);
+        }, 5000, 5000);
 
         // Pager listener over indicator
         indicator.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
