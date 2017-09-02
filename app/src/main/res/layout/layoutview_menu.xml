@@ -14,17 +14,7 @@
         android:fitsSystemWindows="true"
         android:minHeight="?attr/actionBarSize"
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        android:background="#3f96a1" />
-
-<!--
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/toolbar1"
-        android:background="@drawable/background" />-->
-
+        android:background="#FF0000" />
 
     <android.support.v4.view.ViewPager
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -40,9 +30,9 @@
         android:gravity="bottom"
         android:padding="10dip"
         app:centered="true"
-        app:fillColor="#ff0099"
-        app:pageColor="#FF0000"
-        app:snap="false" />
+        app:fillColor="#FF0000"
+        />
+
 
     <TextView
         android:id="@+id/textView2"
