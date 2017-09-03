@@ -62,5 +62,10 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         Backendless.initApp(this,APP_ID,SECRET_KEY);
+        if (Backendless.UserService.loggedInUser()== ""){
+
+        }else{
+            
+        }
     }
 }

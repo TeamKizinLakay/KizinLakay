@@ -50,7 +50,7 @@ public class LogInFragment extends Fragment {
                 backendlessUser.setPassword(password);
                 backendlessUser.setProperty("email", username);
 
-                Backendless.UserService.login(username,password, new AsyncCallback<BackendlessUser>() {
+                Backendless.UserService.login(username, password, new AsyncCallback<BackendlessUser>() {
                     @Override
                     public void handleResponse(BackendlessUser response) {
                         Toast.makeText(getActivity(), "You logged in", Toast.LENGTH_SHORT).show();
@@ -61,12 +61,14 @@ public class LogInFragment extends Fragment {
                         Toast.makeText(getActivity(), "Error logging in", Toast.LENGTH_SHORT).show();
 
                     }
-                });
+                },true);
+
             }
 
         });
         return view;
     }
-
-
 }
+
+
+
