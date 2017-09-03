@@ -58,6 +58,7 @@ public class DessertActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
+        getSupportActionBar().setTitle("Desserts");
 
         Backendless.initApp(getApplicationContext(), AplicationID, SecretKey);
 

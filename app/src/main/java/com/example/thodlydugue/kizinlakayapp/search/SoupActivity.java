@@ -58,6 +58,9 @@ public class SoupActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
+
+        getSupportActionBar().setTitle("Categorie Soupes");
+
         Backendless.initApp(getApplicationContext(), AplicationID, SecretKey);
 
 

@@ -1,25 +1,17 @@
 package com.example.thodlydugue.kizinlakayapp;
 
-import android.app.Activity;
-import android.content.Context;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.view.MenuItemCompat;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 
 import com.example.thodlydugue.kizinlakayapp.Adapter.SlidingImage_Adapter;
 import com.example.thodlydugue.kizinlakayapp.search.ApetizerActivity;
@@ -27,11 +19,11 @@ import com.example.thodlydugue.kizinlakayapp.search.DessertActivity;
 import com.example.thodlydugue.kizinlakayapp.search.JuiceActivity;
 import com.example.thodlydugue.kizinlakayapp.search.MeatActivity;
 import com.example.thodlydugue.kizinlakayapp.search.SoupActivity;
+import com.viewpagerindicator.CirclePageIndicator;
 
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
-import com.viewpagerindicator.CirclePageIndicator;
 
 /**
  * Created by sonel on 8/17/2017.
@@ -57,10 +49,11 @@ public class MenuActivity extends AppCompatActivity {
     private static int NUM_PAGES = 0;
 
     private static final Integer[] IMAGES= {
-            R.drawable.home2,
-            R.drawable.home21,
-            R.drawable.home1,
-            R.drawable.boissons
+            R.drawable.slide1,
+            R.drawable.slide3,
+            R.drawable.slide2,
+            R.drawable.slide4,
+            R.drawable.slide5
     };
     private ArrayList<Integer> ImagesArray = new ArrayList<Integer>();
 
@@ -70,6 +63,10 @@ public class MenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layoutview_menu);
+
+       Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar1);
+        setSupportActionBar(toolbar);
+
      btnmeat=(Button)findViewById(R.id.btnmeat);
 
         btnmeat.setOnClickListener(new View.OnClickListener() {
@@ -142,7 +139,7 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-        btnaccount = (ImageButton) findViewById(R.id.btnAccount);
+      /*  btnaccount = (ImageButton) findViewById(R.id.btnAccount);
         btnaccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -150,7 +147,7 @@ public class MenuActivity extends AppCompatActivity {
                 Intent intent = new Intent(MenuActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
 
         for(int i=0;i<IMAGES.length;i++)
@@ -190,7 +187,7 @@ public class MenuActivity extends AppCompatActivity {
             public void run() {
                 handler.post(Update);
             }
-        }, 3000, 3000);
+        }, 5000, 5000);
 
         // Pager listener over indicator
         indicator.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -217,15 +214,36 @@ public class MenuActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_home, menu);
-        final MenuItem searchItem = menu.findItem(R.id.action_search1);
-        final SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
+        //final MenuItem searchItem = menu.findItem(R.id.action_search1);
+        //final MenuItem eventitem = menu.findItem(R.id.action_event);
+       // final SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
+       // final SearchView searchView1 = (SearchView) MenuItemCompat.getActionView(eventitem);
 
          return true;
     }
 
 
-//Slide Image
+//Set Events in item button in Toolbar
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.action_event:
+                showEvent();
+                return true;
+            case R.id.action_search1:
+               // showHelp();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 
+    private void showEvent()
+    {
+        Intent intent = new Intent(MenuActivity.this, Event_Activity.class);
+        startActivity(intent);
+    }
 
 }

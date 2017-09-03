@@ -58,6 +58,7 @@ public class JuiceActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
+        getSupportActionBar().setTitle("Jus Haitiennes");
 
         Backendless.initApp(getApplicationContext(), AplicationID, SecretKey);
 

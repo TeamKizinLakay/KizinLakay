@@ -7,4 +7,10 @@
         android:title="Account"
         app:showAsAction="ifRoom">
     </item>
+    <item
+        android:id="@+id/action_event"
+        android:icon="@drawable/event"
+        android:title="Evenements"
+        app:showAsAction="ifRoom">
+    </item>
 </menu>

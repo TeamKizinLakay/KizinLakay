@@ -62,6 +62,7 @@ public class MeatActivity extends AppCompatActivity{
                 onBackPressed();
             }
         });
+        getSupportActionBar().setTitle("Categorie Viandes");
 
 
         Backendless.initApp(getApplicationContext(), AplicationID, SecretKey);
