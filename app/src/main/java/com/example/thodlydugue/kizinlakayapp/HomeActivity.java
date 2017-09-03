@@ -22,7 +22,7 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(new Intent(HomeActivity.this, MenuActivity.class));
                 finish();
             }
-        }, secondsDelayed * 2000);
+        }, secondsDelayed * 3000);
 
 
 

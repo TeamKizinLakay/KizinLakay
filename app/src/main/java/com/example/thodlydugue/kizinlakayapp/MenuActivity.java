@@ -1,24 +1,17 @@
 package com.example.thodlydugue.kizinlakayapp;
 
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.view.MenuItemCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.SearchView;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-
 
 import com.example.thodlydugue.kizinlakayapp.Adapter.SlidingImage_Adapter;
 import com.example.thodlydugue.kizinlakayapp.search.ApetizerActivity;
@@ -70,6 +63,10 @@ public class MenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layoutview_menu);
+
+       Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar1);
+        setSupportActionBar(toolbar);
+
      btnmeat=(Button)findViewById(R.id.btnmeat);
 
         btnmeat.setOnClickListener(new View.OnClickListener() {
@@ -142,7 +139,7 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-        btnaccount = (ImageButton) findViewById(R.id.btnAccount);
+      /*  btnaccount = (ImageButton) findViewById(R.id.btnAccount);
         btnaccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -150,7 +147,7 @@ public class MenuActivity extends AppCompatActivity {
                 Intent intent = new Intent(MenuActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
 
         for(int i=0;i<IMAGES.length;i++)
@@ -217,15 +214,36 @@ public class MenuActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_home, menu);
-        final MenuItem searchItem = menu.findItem(R.id.action_search1);
-        final SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
+        //final MenuItem searchItem = menu.findItem(R.id.action_search1);
+        //final MenuItem eventitem = menu.findItem(R.id.action_event);
+       // final SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
+       // final SearchView searchView1 = (SearchView) MenuItemCompat.getActionView(eventitem);
 
          return true;
     }
 
 
-//Slide Image
+//Set Events in item button in Toolbar
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.action_event:
+                showEvent();
+                return true;
+            case R.id.action_search1:
+               // showHelp();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 
+    private void showEvent()
+    {
+        Intent intent = new Intent(MenuActivity.this, Event_Activity.class);
+        startActivity(intent);
+    }
 
 }

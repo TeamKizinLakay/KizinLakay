@@ -16,57 +16,35 @@
 
     </android.support.v7.widget.Toolbar>
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Username  :"
-        android:layout_below="@+id/imageView4"
-        android:layout_toStartOf="@+id/btnConnecter" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Password  :"
-        android:layout_alignBottom="@+id/TvPassword"
-        android:layout_alignStart="@+id/textView3" />
 
     <Button
         android:id="@+id/btnConnecter"
-        android:layout_width="150dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="33dp"
-        android:background="#f9d423"
-        android:text=" Connecter"
-        android:layout_below="@+id/TvPassword"
+        android:background="#FFEBCD"
+        android:text="Se Connecter"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/imageView4"/>
+
+    <Button
+        android:id="@+id/btnInscrire"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:background="#DEB887"
+        android:text="S'inscrire"
+        android:layout_below="@+id/btnConnecter"
         android:layout_centerHorizontal="true" />
 
-    <EditText
-        android:id="@+id/TvUsername"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Thodly"
-        android:inputType="textPersonName"
-        android:layout_alignBottom="@+id/textView3"
-        android:layout_toEndOf="@+id/textView3" />
 
-    <EditText
-        android:id="@+id/TvPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="24#toto"
-        android:inputType="textPersonName"
-        android:layout_marginTop="22dp"
-        android:layout_below="@+id/textView3"
-        android:layout_toEndOf="@+id/textView4" />
+
+
 
     <ImageButton
         android:id="@+id/btnHomeLogin"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#f9d423"
         app:srcCompat="@drawable/ic_action_home"
@@ -82,5 +60,14 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/toolbar"
         app:srcCompat="@drawable/home21" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ou"
+
+        android:textColor="#f9d423"
+        android:layout_marginTop="11dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/btnConnecter"/>
 
 </RelativeLayout>
