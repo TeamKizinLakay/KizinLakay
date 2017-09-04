@@ -5,7 +5,7 @@
 
 The following are the functionality :
 
-* [ ] For each recipes pictures displayed, user can see the following details:
+* [X] For each recipes pictures displayed, user can see the following details:
   * [X] Name, Image , Description  (Portrait mode)
   * [ ] Name, Images, short details (Landscape mode)
 * [ ] User can **scroll down to see more recipes**. 
@@ -15,14 +15,15 @@ The following are the functionality :
   * [X] Soups
   * [X] Desserts
   * [X] Drinks
-  * [ ] Appetizers
-* [ ] User can sign in to their account.  
+  * [X] Appetizers
+* [X] User can sign in to their account.  
 * [ ] User can add their favorite recipes to their account.
+* [X] User can click on the event button to know all activities related to food in Haiti.
   
  ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
-<img src='http://i.imgur.com/8YpXzZv.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/TeamKizinLakay/KizinLakay/blob/master/KizinLakay.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
