@@ -2,72 +2,75 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent" android:layout_height="match_parent">
+
     <android.support.v7.widget.Toolbar
 
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/toolbar"
-        android:layout_height="wrap_content"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
         android:fitsSystemWindows="true"
         android:minHeight="?attr/actionBarSize"
-        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        android:background="#f9d423">
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
     </android.support.v7.widget.Toolbar>
-
 
 
     <Button
         android:id="@+id/btnConnecter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="33dp"
-        android:background="#FFEBCD"
-        android:text="Se Connecter"
+        android:layout_below="@+id/imageView4"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/imageView4"/>
+        android:layout_marginTop="33dp"
+        android:background="?attr/colorPrimary"
+        android:text="Se Connecter"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
 
     <Button
         android:id="@+id/btnInscrire"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="33dp"
-        android:background="#DEB887"
-        android:text="S'inscrire"
         android:layout_below="@+id/btnConnecter"
-        android:layout_centerHorizontal="true" />
-
-
-
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="S'inscrire"
+        android:textColor="@android:color/background_light"
+        android:textSize="14sp" />
 
 
     <ImageButton
         android:id="@+id/btnHomeLogin"
-        android:layout_width="match_parent"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:background="#f9d423"
-        app:srcCompat="@drawable/ic_action_home"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
         android:layout_marginEnd="30dp"
         android:layout_marginTop="11dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true" />
+        android:background="@color/colorPrimary"
+        app:srcCompat="@drawable/ic_action_home" />
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="200dp"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/toolbar"
         app:srcCompat="@drawable/home21" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ou"
+        android:layout_below="@+id/btnConnecter"
 
-        android:textColor="#f9d423"
-        android:layout_marginTop="11dp"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/btnConnecter"/>
+        android:layout_marginTop="11dp"
+        android:text="Ou"
+        android:textColor="@color/colorPrimaryDark" />
 
 </RelativeLayout>
