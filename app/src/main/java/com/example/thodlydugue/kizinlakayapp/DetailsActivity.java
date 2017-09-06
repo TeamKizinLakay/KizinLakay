@@ -15,10 +15,6 @@ import com.squareup.picasso.Picasso;
 import butterknife.ButterKnife;
 
 
-/**
- * Created by sonel on 8/27/2017.
- */
-
 public class DetailsActivity extends AppCompatActivity {
 
     TextView tvRecette;
@@ -46,8 +42,6 @@ public class DetailsActivity extends AppCompatActivity {
 
         recettes recette = (recettes) getIntent().getSerializableExtra("recettes");
 
-
-
         //retrieve all fields and set their value
         tvRecette = ButterKnife.findById(this, R.id.titlerecette);
         tvRecette.setText(recette.getNom_recette());
@@ -62,43 +56,19 @@ public class DetailsActivity extends AppCompatActivity {
         ivImage = ButterKnife.findById(this, R.id.ivrecette);
 
 
-    /*    ivImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = null;
-
-                //launch video activity
-               // intent = new Intent(MovieDetails.this, YouTubeActivity.class);
-
-                if (intent != null) {
-                    // put movie as "extra" into the bundle for access in YouTubeActivity
-                 intent.putExtra("recette", recette);
-                    startActivity(intent);
-                }
-
-            }
-<<<<<<< HEAD
-        });
-
-        });*/
-
-
+        final String text =  recette.getNom_recette()+ " " +recette.getIngredients()+ "" +recette.getPreparation();
         Picasso.with(this).load(recette.getImage_recette())
                 .into(ivImage);
-btshare = (FloatingActionButton)findViewById(R.id.btnshare);
+        btshare = (FloatingActionButton)findViewById(R.id.btnshare);
         btshare.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                Intent myIntent = new Intent (Intent.ACTION_SEND);
-                myIntent.setType("text/plain");
-                String shareBody = "Your body here";
-                String shareSub = "Your Subject here";
-                myIntent.putExtra(Intent.EXTRA_SUBJECT,shareBody);
-                myIntent.putExtra(Intent.EXTRA_TEXT,shareBody);
-                startActivity(Intent.createChooser(myIntent,"Share using"));
-
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.putExtra(Intent.EXTRA_TEXT,
+                        text + ""+ "Pour plus de recettes: https://play.google.com/store/apps/details?id=com.google.android.apps.plus");
+                sendIntent.setType("text/plain");
+                startActivity(sendIntent);
             }
         });
     }
-
-
 }
