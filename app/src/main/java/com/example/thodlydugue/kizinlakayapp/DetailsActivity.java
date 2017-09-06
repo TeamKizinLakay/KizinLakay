@@ -1,6 +1,8 @@
 package com.example.thodlydugue.kizinlakayapp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -23,6 +25,7 @@ public class DetailsActivity extends AppCompatActivity {
     TextView tvIngredients;
     TextView tvpreparation;
     ImageView ivImage;
+    FloatingActionButton btshare;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,7 +85,19 @@ public class DetailsActivity extends AppCompatActivity {
 
         Picasso.with(this).load(recette.getImage_recette())
                 .into(ivImage);
+btshare = (FloatingActionButton)findViewById(R.id.btnshare);
+        btshare.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent myIntent = new Intent (Intent.ACTION_SEND);
+                myIntent.setType("text/plain");
+                String shareBody = "Your body here";
+                String shareSub = "Your Subject here";
+                myIntent.putExtra(Intent.EXTRA_SUBJECT,shareBody);
+                myIntent.putExtra(Intent.EXTRA_TEXT,shareBody);
+                startActivity(Intent.createChooser(myIntent,"Share using"));
 
+            }
+        });
     }
 
 
