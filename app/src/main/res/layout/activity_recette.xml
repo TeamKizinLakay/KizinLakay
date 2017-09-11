@@ -19,16 +19,6 @@
         app:titleTextColor="@android:color/white"
         android:background="#f50206" />
 
-
-
-
-   <!-- <android.support.v7.widget.RecyclerView
-        android:id="@+id/rvrecettes"
-        android:layout_width="match_parent"
-        android:layout_height="531dp"
-        android:background="@color/white"
-        />-->
-
     <ListView
         android:layout_below="@id/toolbar"
         android:layout_width="match_parent"
@@ -36,22 +26,5 @@
         android:divider="@null"
         android:dividerHeight="5dp"
         android:id="@+id/lvrecette" />
-
-
-
-
-
-  <!--  <ImageButton
-        android:id="@+id/btnback"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="15dp"
-        android:background="#f50206"
-        app:srcCompat="?attr/homeAsUpIndicator" />-->
-
-
 
 </RelativeLayout>

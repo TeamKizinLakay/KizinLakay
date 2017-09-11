@@ -2,11 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_search1"
+        android:id="@+id/action_account"
         android:icon="@drawable/ic_account"
         android:title="Account"
-        app:showAsAction="ifRoom">
-    </item>
+        app:showAsAction="ifRoom"></item>
     <item
         android:id="@+id/action_event"
         android:icon="@drawable/event"
