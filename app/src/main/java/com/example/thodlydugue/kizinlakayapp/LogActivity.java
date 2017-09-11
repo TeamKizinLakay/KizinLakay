@@ -18,6 +18,6 @@ public class LogActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         LogInFragment register = new LogInFragment();
-        getSupportFragmentManager().beginTransaction().add(R.id.registerContainer,register).commit();
+        //getSupportFragmentManager().beginTransaction().add(R.id.registerContainer,register).commit();
     }
 }
