@@ -47,12 +47,12 @@
         android:id="@+id/btnHomeLogin"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginEnd="30dp"
-        android:layout_marginTop="11dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginTop="12dp"
         android:background="@color/colorPrimary"
-        app:srcCompat="@drawable/ic_action_home" />
+        app:srcCompat="@drawable/ic_action_home"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
 
     <ImageView
         android:id="@+id/imageView4"
