@@ -6,18 +6,18 @@
 The following are the functionality :
 
 * [X] For each recipes pictures displayed, user can see the following details:
-  * [X] Name, Image , Description  (Portrait mode)
-  * [ ] Name, Images, short details (Landscape mode)
-* [ ] User can **scroll down to see more recipes**. 
-* [X] User can click on the search button to **search for recipes** in a grid of recipes
-* [X] User can search recipes by categories:
+  * [X] Name, Image , Ingredients, Preparation
+* [X] User can **scroll down to see more recipes**. 
+* [X] User can click on the search button to **search for recipes** 
+* [X] User can search recipes in each categories:
   * [X] Meat
   * [X] Soups
   * [X] Desserts
   * [X] Drinks
   * [X] Appetizers
 * [X] User can sign in to their account.  
-* [ ] User can add their favorite recipes to their account.
+* [X] User can sign up for a new account. 
+* [X] User can share their favorite recipes.
 * [X] User can click on the event button to know all activities related to food in Haiti.
   
  ## Video Walkthrough
@@ -28,6 +28,7 @@ Here's a walkthrough of implemented user stories:
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Open-source libraries used 
+API : Backendless 
 ## License
 
     Copyright [2017] [Thodly DUGUE, Jimmy Joseph, Taina Sylvestre]
@@ -37,6 +38,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
     You may obtain a copy of the License at
 
         http://www.apache.org/licenses/LICENSE-2.0
+	
 
     Unless required by applicable law or agreed to in writing, software
     distributed under the License is distributed on an "AS IS" BASIS,
