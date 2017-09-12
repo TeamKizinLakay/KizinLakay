@@ -40,7 +40,7 @@ public class JuiceActivity extends AppCompatActivity {
     public static final String SecretKey="F07AD7DB-2B05-C77E-FF2A-9BA63E0C1E00";
 
 
-   public  ArrayList<recettes> listRecette;
+    public  ArrayList<recettes> listRecette;
     public  ListView lvrecette;
     public  ListviewrecetteAdapter adapterRecette;
 
@@ -60,7 +60,9 @@ public class JuiceActivity extends AppCompatActivity {
             }
         });
 
-        getSupportActionBar().setTitle("Jus");
+
+        getSupportActionBar().setTitle("Boissons");
+
 
         Backendless.initApp(getApplicationContext(), AplicationID, SecretKey);
 
