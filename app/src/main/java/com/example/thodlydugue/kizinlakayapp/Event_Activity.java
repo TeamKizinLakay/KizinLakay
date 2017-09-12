@@ -35,6 +35,7 @@ public class Event_Activity extends AppCompatActivity {
         setToolbar();
 
         if (getSupportActionBar() != null)
+
         {
            // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setTitle("Categorie Viandes")
@@ -54,6 +55,7 @@ public class Event_Activity extends AppCompatActivity {
         });
 
         //webvalue.loadUrl("https://www.instagram.com/kinamhotel/");
+
 
         webvalue.loadUrl("https://web.facebook.com/maisonmenagere/");
         btnback = (ImageButton)findViewById(R.id.btnBack);
