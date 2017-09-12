@@ -35,11 +35,11 @@ import java.util.Map;
  */
 
 public class MeatActivity extends AppCompatActivity{
-ProgressDialog progress;
+    ProgressDialog progress;
     public static final String AplicationID="268BBE9A-360E-B2F3-FF8D-C85C0FF31D00";
     public static final String SecretKey="F07AD7DB-2B05-C77E-FF2A-9BA63E0C1E00";
 
-     private recettes recette;
+    private recettes recette;
 
 
     public ArrayList<recettes> listRecette;
@@ -63,7 +63,7 @@ ProgressDialog progress;
                 onBackPressed();
             }
         });
-        getSupportActionBar().setTitle("Categorie Viandes");
+        getSupportActionBar().setTitle("Viandes");
 
         Backendless.initApp(getApplicationContext(), AplicationID, SecretKey);
 
@@ -79,7 +79,7 @@ ProgressDialog progress;
         //whereClause.append( ".objectId='" ).append( "1D075E85-8468-6319-FF44-4831E11AB400"  );
 
 
-    //  String whereClause = "categorie=Viandes";
+        //  String whereClause = "categorie=Viandes";
         IDataStore<Map> recettesStorage = Backendless.Data.of( "recettes" );
 
 
@@ -91,7 +91,7 @@ ProgressDialog progress;
         setloading();
         recettesStorage.find(queryBuilder,new AsyncCallback<List<Map>>()
 
-       {
+        {
 
 
             @Override
@@ -123,9 +123,9 @@ ProgressDialog progress;
                 //ratings using RatingBar
                 recettes recette = listRecette.get(position);
 
-                   Intent intent = new Intent(MeatActivity.this, DetailsActivity.class);
-                     intent.putExtra("recettes", recette);
-                    startActivity(intent);
+                Intent intent = new Intent(MeatActivity.this, DetailsActivity.class);
+                intent.putExtra("recettes", recette);
+                startActivity(intent);
 
             }
         });

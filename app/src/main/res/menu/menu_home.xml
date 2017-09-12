@@ -9,7 +9,7 @@
     </item>
     <item
         android:id="@+id/action_event"
-        android:icon="@drawable/icone_event"
+        android:icon="@drawable/event"
         android:title="Evenements"
         app:showAsAction="ifRoom">
     </item>
