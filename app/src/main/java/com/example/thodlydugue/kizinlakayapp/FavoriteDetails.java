@@ -1,31 +1,24 @@
 package com.example.thodlydugue.kizinlakayapp;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.backendless.Backendless;
-import com.backendless.async.callback.AsyncCallback;
-import com.backendless.exceptions.BackendlessFault;
-import com.example.thodlydugue.kizinlakayapp.Modele.recettes;
+import com.example.thodlydugue.kizinlakayapp.Modele.favorites;
 import com.squareup.picasso.Picasso;
-
-import java.util.HashMap;
-import java.util.Map;
 
 import butterknife.ButterKnife;
 
+/**
+ * Created by sonel on 9/11/2017.
+ */
 
-public class DetailsActivity extends AppCompatActivity {
+public class FavoriteDetails extends AppCompatActivity {
     public static final String AplicationID="268BBE9A-360E-B2F3-FF8D-C85C0FF31D00";
     public static final String SecretKey="F07AD7DB-2B05-C77E-FF2A-9BA63E0C1E00";
 
@@ -37,7 +30,9 @@ public class DetailsActivity extends AppCompatActivity {
 
     FloatingActionButton btnfav;
 
-   recettes recette;
+    //recettes recette;
+
+    favorites favorite;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,24 +50,24 @@ public class DetailsActivity extends AppCompatActivity {
         });
         //retrieve recette that's been 'sent' from main activity
 
-         recette = (recettes) getIntent().getSerializableExtra("recettes");
+        favorite = (favorites) getIntent().getSerializableExtra("favorites");
 
         //retrieve all fields and set their value
         tvRecette = ButterKnife.findById(this, R.id.titlerecette);
-        tvRecette.setText(recette.getNom_recette());
+        tvRecette.setText(favorite.getNom_recette());
 
         tvIngredients = ButterKnife.findById(this, R.id.tvIngredients);
-        tvIngredients.setText(recette.getIngredients());
+        tvIngredients.setText(favorite.getIngredients());
 
         tvpreparation = ButterKnife.findById(this, R.id.preparation);
-        tvpreparation.setText(recette.getPreparation());
+        tvpreparation.setText(favorite.getPreparation());
 
 
         ivImage = ButterKnife.findById(this, R.id.ivrecette);
 
 
-        final String text =  recette.getNom_recette()+ " " +recette.getIngredients()+ "" +recette.getPreparation();
-        Picasso.with(this).load(recette.getImage_recette())
+        final String text =  favorite.getNom_recette()+ " " +favorite.getIngredients()+ "" +favorite.getPreparation();
+        Picasso.with(this).load(favorite.getImage_recette())
                 .into(ivImage);
         btshare = (FloatingActionButton)findViewById(R.id.btnshare);
         btshare.setOnClickListener(new View.OnClickListener(){
@@ -86,8 +81,8 @@ public class DetailsActivity extends AppCompatActivity {
             }
         });
 
-        btnfav=(FloatingActionButton)findViewById(R.id.btnfavorite);
-        btnfav.setOnClickListener(new View.OnClickListener(){
+       // btnfav=(FloatingActionButton)findViewById(R.id.btnfavorite);
+       /*btnfav.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 savefavorite();
 
@@ -153,7 +148,7 @@ public class DetailsActivity extends AppCompatActivity {
 
             alertDialog.show();
 
-        }
+        }*/
 
     }
 
