@@ -1,15 +1,10 @@
 package com.example.thodlydugue.kizinlakayapp.search;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -20,9 +15,10 @@ import com.backendless.IDataStore;
 import com.backendless.async.callback.AsyncCallback;
 import com.backendless.exceptions.BackendlessFault;
 import com.backendless.persistence.DataQueryBuilder;
-import com.example.thodlydugue.kizinlakayapp.Adapter.ListviewrecetteAdapter;
-import com.example.thodlydugue.kizinlakayapp.DetailsActivity;
-import com.example.thodlydugue.kizinlakayapp.Modele.recettes;
+import com.example.thodlydugue.kizinlakayapp.Adapter.favoriteAdapter;
+import com.example.thodlydugue.kizinlakayapp.FavoriteDetails;
+import com.example.thodlydugue.kizinlakayapp.LoginActivity;
+import com.example.thodlydugue.kizinlakayapp.Modele.favorites;
 import com.example.thodlydugue.kizinlakayapp.R;
 
 import java.util.ArrayList;
@@ -30,24 +26,26 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by sonel on 8/27/2017.
+ * Created by sonel on 9/11/2017.
  */
 
-public class JuiceActivity extends AppCompatActivity {
-
-    ProgressDialog progress;
+public class FavoriteActivity extends AppCompatActivity {
     public static final String AplicationID="268BBE9A-360E-B2F3-FF8D-C85C0FF31D00";
     public static final String SecretKey="F07AD7DB-2B05-C77E-FF2A-9BA63E0C1E00";
 
+    private favorites fav;
 
-   public  ArrayList<recettes> listRecette;
-    public  ListView lvrecette;
-    public  ListviewrecetteAdapter adapterRecette;
+
+    public ArrayList<favorites> listfavorite;
+    public ListView lvfavorite;
+    public favoriteAdapter adapterfavorite;
+
+
 
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recette);
+        setContentView(R.layout.activity_favorite);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -59,17 +57,16 @@ public class JuiceActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
-
-        getSupportActionBar().setTitle("Jus");
+        getSupportActionBar().setTitle("Recettes Favories");
 
         Backendless.initApp(getApplicationContext(), AplicationID, SecretKey);
 
 
-        lvrecette = (ListView) findViewById(R.id.lvrecette);
-        listRecette = new ArrayList<>();
-        adapterRecette = new ListviewrecetteAdapter(this, listRecette);
+        lvfavorite = (ListView) findViewById(R.id.lvfavorite);
+        listfavorite = new ArrayList<>();
+        adapterfavorite = new favoriteAdapter(this, listfavorite);
 
-        lvrecette.setAdapter(adapterRecette);
+        lvfavorite.setAdapter(adapterfavorite);
 
         //StringBuilder whereClause = new StringBuilder();
         //whereClause.append( "categories[nom_categorie]" );
@@ -77,56 +74,61 @@ public class JuiceActivity extends AppCompatActivity {
 
 
         //  String whereClause = "categorie=Viandes";
-        IDataStore<Map> personneStorage = Backendless.Data.of( "recettes" );
+        IDataStore<Map> recettesStorage = Backendless.Data.of("favorites");
 
 
         DataQueryBuilder queryBuilder = DataQueryBuilder.create();
         // queryBuilder.setWhereClause( whereClause.toString());
 
-        queryBuilder.setWhereClause("id_categorie='0B7514AA-A148-1ACD-FFF5-A00438A61100'");
-        setloading();
-        personneStorage.find(queryBuilder,new AsyncCallback<List<Map>>()
+        queryBuilder.setWhereClause("id_user=" + LoginActivity.idUser);
+
+      //  setloading();
+        recettesStorage.find(queryBuilder, new AsyncCallback<List<Map>>()
 
         {
+
 
             @Override
             public void handleResponse(List<Map> response) {
 
                 //recette = (recettes.fromListMap(response));
-                adapterRecette.addAll(recettes.fromListMap(response));
-                progress.dismiss();
-                adapterRecette.notifyDataSetChanged();
-                Log.d("DEBUG",lvrecette.toString());
-                Toast.makeText(getApplicationContext(),"Success",Toast.LENGTH_SHORT).show();
+                adapterfavorite.addAll(favorites.fromListMap(response));
+                // progress.dismiss();
+                adapterfavorite.notifyDataSetChanged();
+                Log.d("DEBUG", lvfavorite.toString());
+                //Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_SHORT).show();
 
             }
 
             @Override
             public void handleFault(BackendlessFault fault) {
 
-                Toast.makeText(getApplicationContext(), fault.getMessage(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), fault.getMessage(), Toast.LENGTH_SHORT).show();
 
             }
         });
-
-        lvrecette.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//Set up Method details view
+        lvfavorite.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 //view is an instance of MovieView
                 //Expose details of movie (ratings (out of 10), popularity, and synopsis
                 //ratings using RatingBar
-                recettes recette = listRecette.get(position);
+                favorites favorite = listfavorite.get(position);
 
-                Intent intent = new Intent(JuiceActivity.this, DetailsActivity.class);
-                intent.putExtra("recettes", recette);
+                Intent intent = new Intent(FavoriteActivity.this, FavoriteDetails.class);
+                intent.putExtra("favorites", favorite);
                 startActivity(intent);
 
             }
         });
 
+
+
     }
 
+/*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -136,7 +138,6 @@ public class JuiceActivity extends AppCompatActivity {
         //// Expand the search view and request focus
         //searchItem.expandActionView();
         //searchView.requestFocus();
-
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -144,14 +145,14 @@ public class JuiceActivity extends AppCompatActivity {
 
                 // workaround to avoid issues with some emulators and keyboard devices firing twice if a keyboard enter is used
                 // see https://code.google.com/p/android/issues/detail?id=24599
-                fetchjuice(query);
+                fetchmeat(query);
                 // Reset SearchView
                 searchView.clearFocus();
                 searchView.setQuery("", false);
                 searchView.setIconified(true);
                 searchItem.collapseActionView();
                 // Set activity title to search query
-                JuiceActivity.this.setTitle(query);
+                MeatActivity.this.setTitle(query);
                 return true;
             }
 
@@ -162,10 +163,9 @@ public class JuiceActivity extends AppCompatActivity {
         });
         return true;
 
+    }*/
 
-    }
-
-    private void fetchjuice(String query) {
+   /* private void fetchmeat(String query) {
         lvrecette = (ListView) findViewById(R.id.lvrecette);
         listRecette = new ArrayList<>();
         adapterRecette = new ListviewrecetteAdapter(this, listRecette);
@@ -215,6 +215,7 @@ public class JuiceActivity extends AppCompatActivity {
 
 
     }
+
     public void setloading(){
         progress = new ProgressDialog(this);
         // progress.setTitle("Loading");
@@ -224,6 +225,11 @@ public class JuiceActivity extends AppCompatActivity {
 // To dismiss the dialog
         //progress.dismiss();
 
-    }
+    }*/
+
+
+    
+
+
 
 }

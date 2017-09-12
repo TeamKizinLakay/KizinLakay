@@ -1,5 +1,6 @@
 package com.example.thodlydugue.kizinlakayapp.Modele;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -8,7 +9,7 @@ import java.util.Map;
  * Created by sonel on 9/10/2017.
  */
 
-public class favorites {
+public class favorites implements Serializable {
     private String nom_recette;
     private String image_recette;
     private Users id_user;
@@ -77,8 +78,8 @@ public class favorites {
 
         for(int i = 0; i < map.size(); i++) {
             favorites f = new favorites();
-            f.setNom_recette((String) map.get(i).get("nom_recette"));
-            f.setImage_recette((String) map.get(i).get("image_recette"));
+            f.setNom_recette((String) map.get(i).get("nomrecette"));
+            f.setImage_recette((String) map.get(i).get("imagerecette"));
             f.setDescription((String) map.get(i).get("description"));
             f.setIngredients((String) map.get(i).get("ingredients"));
             f.setPreparation((String) map.get(i).get("preparation"));

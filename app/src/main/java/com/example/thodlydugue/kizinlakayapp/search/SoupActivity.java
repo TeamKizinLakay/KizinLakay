@@ -1,5 +1,6 @@
 package com.example.thodlydugue.kizinlakayapp.search;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
@@ -34,7 +35,7 @@ import java.util.Map;
 
 public class SoupActivity extends AppCompatActivity {
 
-
+ProgressDialog progress;
     public static final String AplicationID="268BBE9A-360E-B2F3-FF8D-C85C0FF31D00";
     public static final String SecretKey="F07AD7DB-2B05-C77E-FF2A-9BA63E0C1E00";
 
@@ -84,7 +85,7 @@ public class SoupActivity extends AppCompatActivity {
         // queryBuilder.setWhereClause( whereClause.toString());
 
         queryBuilder.setWhereClause("id_categorie='E789DC8D-EEDA-831B-FFC0-D61CE9FE5000'");
-
+        setloading();
         personneStorage.find(queryBuilder,new AsyncCallback<List<Map>>()
 
         {
@@ -94,6 +95,7 @@ public class SoupActivity extends AppCompatActivity {
 
                 //recette = (recettes.fromListMap(response));
                 adapterRecette.addAll(recettes.fromListMap(response));
+                progress.dismiss();
                 adapterRecette.notifyDataSetChanged();
                 Log.d("DEBUG",lvrecette.toString());
                 Toast.makeText(getApplicationContext(),"Success",Toast.LENGTH_SHORT).show();
@@ -211,6 +213,16 @@ public class SoupActivity extends AppCompatActivity {
             }
         });
 
+
+    }
+    public void setloading(){
+        progress = new ProgressDialog(this);
+        // progress.setTitle("Loading");
+        progress.setMessage("Chargement...");
+        progress.setCancelable(false); // disable dismiss by tapping outside of the dialog
+        progress.show();
+// To dismiss the dialog
+        //progress.dismiss();
 
     }
 
