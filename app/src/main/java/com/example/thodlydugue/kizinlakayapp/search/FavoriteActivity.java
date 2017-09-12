@@ -1,12 +1,10 @@
 package com.example.thodlydugue.kizinlakayapp.search;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -16,7 +14,6 @@ import com.backendless.async.callback.AsyncCallback;
 import com.backendless.exceptions.BackendlessFault;
 import com.backendless.persistence.DataQueryBuilder;
 import com.example.thodlydugue.kizinlakayapp.Adapter.favoriteAdapter;
-import com.example.thodlydugue.kizinlakayapp.FavoriteDetails;
 import com.example.thodlydugue.kizinlakayapp.LoginActivity;
 import com.example.thodlydugue.kizinlakayapp.Modele.favorites;
 import com.example.thodlydugue.kizinlakayapp.R;
@@ -108,7 +105,7 @@ public class FavoriteActivity extends AppCompatActivity {
             }
         });
 //Set up Method details view
-        lvfavorite.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+       /* lvfavorite.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -122,7 +119,7 @@ public class FavoriteActivity extends AppCompatActivity {
                 startActivity(intent);
 
             }
-        });
+        });*/
 
 
 

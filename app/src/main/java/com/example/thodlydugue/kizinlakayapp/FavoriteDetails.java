@@ -36,7 +36,7 @@ public class FavoriteDetails extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_details);
+        setContentView(R.layout.activity_detailsfavorites);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbardetails);
         setSupportActionBar(toolbar);
