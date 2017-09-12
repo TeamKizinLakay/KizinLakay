@@ -34,7 +34,7 @@
     <!-- loading messages -->
 
     <string name="loading_register">Sending registration requestâ€¦</string>
-    <string name="loading_login">Logging inâ€¦</string>
+    <string name="loading_login">Verification¦</string>
 
 
 
