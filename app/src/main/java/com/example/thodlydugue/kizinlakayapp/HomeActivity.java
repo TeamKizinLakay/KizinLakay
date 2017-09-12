@@ -51,26 +51,8 @@ public class HomeActivity extends AppCompatActivity {
             }
         }, secondsDelayed * 3000);
 
+    }
 
-
-      //  bt = (Button) findViewById(R.id.btnStart);
-        // bt.setBackgroundColor(Color.BLUE);
-       // bt.setOnClickListener(new View.OnClickListener() {
-         //   @Override
-            //public void onClick(View v) {
-
-               // Intent intent= new Intent(HomeActivity.this,MenuActivity.class);
-               // intent.putExtra("movie", movie);
-                //intent.putExtra("item",adapter.getItem(position));
-                //startActivity(intent);
-
-
-
-        //    }
-       // });
-
-
-            }
 
     private void startAnimation() {
 
@@ -94,4 +76,3 @@ public class HomeActivity extends AppCompatActivity {
 
 
 }
-

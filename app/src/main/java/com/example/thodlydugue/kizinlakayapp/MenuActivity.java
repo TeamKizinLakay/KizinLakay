@@ -1,21 +1,24 @@
 package com.example.thodlydugue.kizinlakayapp;
 
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.example.thodlydugue.kizinlakayapp.Adapter.SlidingImage_Adapter;
 import com.example.thodlydugue.kizinlakayapp.search.ApetizerActivity;
 import com.example.thodlydugue.kizinlakayapp.search.DessertActivity;
+import com.example.thodlydugue.kizinlakayapp.search.FavoriteActivity;
 import com.example.thodlydugue.kizinlakayapp.search.JuiceActivity;
 import com.example.thodlydugue.kizinlakayapp.search.MeatActivity;
 import com.example.thodlydugue.kizinlakayapp.search.SoupActivity;
@@ -30,19 +33,17 @@ import java.util.TimerTask;
  */
 
 public class MenuActivity extends AppCompatActivity {
-   Button btnmeat;
-
+    Button btnmeat;
     Button btndessert;
-
     Button btndrink;
-
-    Button btnapptizer;
-
     Button btnaperitif;
-
     Button btnsoup;
 
-    ImageButton btnaccount;
+    LoginActivity iduser;
+
+    public static final String AplicationID="268BBE9A-360E-B2F3-FF8D-C85C0FF31D00";
+    public static final String SecretKey="F07AD7DB-2B05-C77E-FF2A-9BA63E0C1E00";
+
 
     private static ViewPager mPager;
     private static int currentPage = 0;
@@ -64,10 +65,10 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layoutview_menu);
 
-       Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar1);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar1);
         setSupportActionBar(toolbar);
 
-     btnmeat=(Button)findViewById(R.id.btnmeat);
+        btnmeat=(Button)findViewById(R.id.btnmeat);
 
         btnmeat.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,7 +76,7 @@ public class MenuActivity extends AppCompatActivity {
 
 
                 Intent intent= new Intent(MenuActivity.this,MeatActivity.class);
-               // intent.putExtra("movie", movie);
+                // intent.putExtra("movie", movie);
 
                 //intent.putExtra("item",adapter.getItem(position));
                 startActivity(intent);
@@ -139,15 +140,6 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-      /*  btnaccount = (ImageButton) findViewById(R.id.btnAccount);
-        btnaccount.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent intent = new Intent(MenuActivity.this, LoginActivity.class);
-                startActivity(intent);
-            }
-        });*/
 
 
         for(int i=0;i<IMAGES.length;i++)
@@ -216,10 +208,10 @@ public class MenuActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_home, menu);
         //final MenuItem searchItem = menu.findItem(R.id.action_search1);
         //final MenuItem eventitem = menu.findItem(R.id.action_event);
-       // final SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
-       // final SearchView searchView1 = (SearchView) MenuItemCompat.getActionView(eventitem);
+        // final SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
+        // final SearchView searchView1 = (SearchView) MenuItemCompat.getActionView(eventitem);
 
-         return true;
+        return true;
     }
 
 
@@ -232,8 +224,11 @@ public class MenuActivity extends AppCompatActivity {
             case R.id.action_event:
                 showEvent();
                 return true;
-            case R.id.action_search1:
+            case R.id.action_account:
+
                // showHelp();
+               // favoritelist();
+               loadaccount();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -245,5 +240,62 @@ public class MenuActivity extends AppCompatActivity {
         Intent intent = new Intent(MenuActivity.this, Event_Activity.class);
         startActivity(intent);
     }
+   private void favoritelist()
+    {
+        Intent intent = new Intent(MenuActivity.this, FavoriteActivity.class);
+        startActivity(intent);
+
+
+    }
+    public void loadaccount() {
+        //Backendless.initApp(getApplicationContext(),AplicationID,SecretKey);
+        //recettes recette = (recettes) getIntent().getSerializableExtra("recettes");
+
+        if (LoginActivity.idUser != null) {
+
+            favoritelist();
+
+
+                }
+
+
+
+
+        else {
+            Toast.makeText(MenuActivity.this, "vous devez vous connecter, ou creer un compte", Toast.LENGTH_SHORT).show();
+
+            AlertDialog.Builder alertDialog = new AlertDialog.Builder(MenuActivity.this);
+            alertDialog.setTitle("Connexion");
+            alertDialog.setMessage("Vous devez etre connecté");
+            //alertDialog.setIcon(R.drawable.ic_launcher);
+
+            alertDialog.setNegativeButton("NON",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog,  int which) {
+                            Toast.makeText(getApplicationContext(), "You clicked on NO", Toast.LENGTH_SHORT).show();
+                            dialog.dismiss();
+                            // tv.setText("No Button clicked");
+                        }
+                    });
+            alertDialog.setPositiveButton("OUI",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            // Write your code here to execute after dialog
+                            Intent intent=new Intent(MenuActivity.this,LoginActivity.class);
+                            startActivity(intent);
+                            Toast.makeText(getApplicationContext(), "You clicked on YES", Toast.LENGTH_SHORT).show();
+                            //tv.setText("Yes Button clicked");
+                        }
+                    });
+
+            alertDialog.show();
+
+
+        }
+
+    }
+
+
 
 }
+
