@@ -63,7 +63,7 @@ ProgressDialog progress;
                 onBackPressed();
             }
         });
-        getSupportActionBar().setTitle("Categorie Viandes");
+        getSupportActionBar().setTitle("Viandes");
 
         Backendless.initApp(getApplicationContext(), AplicationID, SecretKey);
 

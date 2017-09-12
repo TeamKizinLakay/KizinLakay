@@ -60,7 +60,7 @@ public class JuiceActivity extends AppCompatActivity {
             }
         });
 
-        getSupportActionBar().setTitle("Jus");
+        getSupportActionBar().setTitle("Boissons");
 
         Backendless.initApp(getApplicationContext(), AplicationID, SecretKey);
 
