@@ -60,7 +60,7 @@ ProgressDialog progress;
             }
         });
 
-        getSupportActionBar().setTitle("Categorie Soupes");
+        getSupportActionBar().setTitle("Soupes");
 
         Backendless.initApp(getApplicationContext(), AplicationID, SecretKey);
 
