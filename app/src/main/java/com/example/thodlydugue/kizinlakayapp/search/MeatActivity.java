@@ -77,9 +77,7 @@ public class MeatActivity extends AppCompatActivity{
         //StringBuilder whereClause = new StringBuilder();
         //whereClause.append( "categories[nom_categorie]" );
         //whereClause.append( ".objectId='" ).append( "1D075E85-8468-6319-FF44-4831E11AB400"  );
-
-
-        //  String whereClause = "categorie=Viandes";
+        
         IDataStore<Map> recettesStorage = Backendless.Data.of( "recettes" );
 
 
