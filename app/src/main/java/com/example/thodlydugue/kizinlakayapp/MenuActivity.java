@@ -56,10 +56,10 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layoutview_menu);
 
-       Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar1);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar1);
         setSupportActionBar(toolbar);
 
-     btnmeat=(Button)findViewById(R.id.btnmeat);
+        btnmeat=(Button)findViewById(R.id.btnmeat);
 
         btnmeat.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,7 +67,7 @@ public class MenuActivity extends AppCompatActivity {
 
 
                 Intent intent= new Intent(MenuActivity.this,MeatActivity.class);
-               // intent.putExtra("movie", movie);
+                // intent.putExtra("movie", movie);
 
                 //intent.putExtra("item",adapter.getItem(position));
                 startActivity(intent);
@@ -199,10 +199,10 @@ public class MenuActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_home, menu);
         //final MenuItem searchItem = menu.findItem(R.id.action_search1);
         //final MenuItem eventitem = menu.findItem(R.id.action_event);
-       // final SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
-       // final SearchView searchView1 = (SearchView) MenuItemCompat.getActionView(eventitem);
+        // final SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
+        // final SearchView searchView1 = (SearchView) MenuItemCompat.getActionView(eventitem);
 
-         return true;
+        return true;
     }
 
 
@@ -216,7 +216,6 @@ public class MenuActivity extends AppCompatActivity {
                 showEvent();
                 return true;
             case R.id.action_account:
-               // showHelp();
                 Account();
                 return true;
             default:
@@ -235,3 +234,4 @@ public class MenuActivity extends AppCompatActivity {
         startActivity(intent);
     }
 }
+

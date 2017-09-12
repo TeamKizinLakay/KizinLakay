@@ -51,11 +51,8 @@ public class HomeActivity extends AppCompatActivity {
             }
         }, secondsDelayed * 3000);
 
+    }
 
-
-
-
-            }
 
     private void startAnimation() {
 
@@ -79,4 +76,3 @@ public class HomeActivity extends AppCompatActivity {
 
 
 }
-
