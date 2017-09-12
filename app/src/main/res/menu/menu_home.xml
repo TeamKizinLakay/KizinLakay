@@ -5,8 +5,7 @@
         android:id="@+id/action_account"
         android:icon="@drawable/ic_account"
         android:title="Account"
-        app:showAsAction="ifRoom">
-    </item>
+        app:showAsAction="ifRoom"></item>
     <item
         android:id="@+id/action_event"
         android:icon="@drawable/event"

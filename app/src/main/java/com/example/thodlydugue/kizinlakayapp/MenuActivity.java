@@ -216,7 +216,6 @@ public class MenuActivity extends AppCompatActivity {
                 showEvent();
                 return true;
             case R.id.action_account:
-                // showHelp();
                 Account();
                 return true;
             default:
@@ -235,3 +234,4 @@ public class MenuActivity extends AppCompatActivity {
         startActivity(intent);
     }
 }
+
