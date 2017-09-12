@@ -24,7 +24,6 @@
          android:layout_alignParentStart="true"
          android:alpha="0.6"
          android:background="@color/white">
-
          <TextView
              android:id="@+id/textView5"
              android:layout_width="match_parent"
@@ -36,7 +35,6 @@
              android:textSize="40dp"
              android:textStyle="bold" />
      </LinearLayout>
-
      <TextView
          android:id="@+id/textView"
          android:layout_width="wrap_content"
@@ -48,7 +46,6 @@
          android:textStyle="bold"
          android:layout_alignParentTop="true"
          android:layout_centerHorizontal="true" />
-
      <ImageView
          android:id="@+id/imageView"
          android:layout_width="200dp"
@@ -93,4 +90,4 @@
     </FrameLayout>
 
 
- </RelativeLayout>
+</RelativeLayout>

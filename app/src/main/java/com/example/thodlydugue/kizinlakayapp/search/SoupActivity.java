@@ -35,7 +35,7 @@ import java.util.Map;
 
 public class SoupActivity extends AppCompatActivity {
 
-ProgressDialog progress;
+    ProgressDialog progress;
     public static final String AplicationID="268BBE9A-360E-B2F3-FF8D-C85C0FF31D00";
     public static final String SecretKey="F07AD7DB-2B05-C77E-FF2A-9BA63E0C1E00";
 
